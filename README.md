@@ -1,108 +1,181 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# AVEC PLAISIR
 
-Welcome leah-jala,
+"Avec Plaisir" (With Pleasure) is a fictional French Restaurant located on Charlotte Street in London, which is a wonderful location for food lovers to enjoy food from independent restaurant owners.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The webpage was created as a restaurant management application to allow the site owner, with staff, to present their restaurant to the works and
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+- Take and manage bookings
+- Manage menus
+- Allow customers to make and manage their own bookings. 
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## WEBSITE DESIGN
 
-`python3 -m http.server`
+(REFERENCE USED - CI User Experience Essentials, "It's all about the user experience)
 
-A blue button should appear to click: _Make Public_,
+### The strategy plane
 
-Another blue button should appear to click: _Open Browser_.
+#### Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Why is the site needed? This is a website for a restaurant. The goals are to 
+1. Make the restaurant look attractive.
+2. Allow customers to view the menus.
+3. Allow customers to make and manage a reservation.
+4. Allow staff to easily make and manage their own bookings, menus and users.
 
-A blue button should appear to click: _Make Public_,
+#### What might drive emotional factors?
+If the website looks attractive and runs efficiently, using few clicks and showing responsiveness, it is a good reflection of the restaurant's customer care and attention to detail as an overall part of the product they deliver ot customers, including the eventual food. 
 
-Another blue button should appear to click: _Open Browser_.
+#### Target Audience
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The website needs to cater to  site owner, restaurant staff and customer needs.
 
-To log into the Heroku toolbelt CLI:
+- Site owner and Staff:
+    - Where do they go first? 
+        - The site owner will likely to the the admin panel first, where they can review bookings and made any edits to their menus.
+    - What do you use it most for?
+        - To view bookings to manage tables when customers arrive without bookings or call on the telephone and manage as appropriate.
+        - To CRUD customer bookings if they call in and ask for this. 
+        - To keep the restaurant menus up to date. 
+    - What happens before/after using the site
+        - Before:Staff most likely receive a phone call.
+        - Before: Staff need to consult the bookings table to see if they can accommdate a walk-in customer.
+        - After: staff members can let the kitchen know how busy the restaurant will be. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Customers:
+    - Where do you go first?
+        - The homepage as it is the main page.
+    - What do you use it most for?
+        - To look at the menu so I can decide if I feel like eating there.
+    - What happens before/after using the site
+        - Before: I've search for French restaurants in the area.
+        - After: If the website is appealing and I made a booking, I'll tell my friends about it.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+What are the most important features? What trade offs are needed
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Scope
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Looking at the goals and use cases above, the following requirements were identified.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Minimum requirements:
+    - There must be a way to take and manage customer bookings with full CRUD.
+    - The customer must be able to view the menus.
+    - The customer must have information about the location of the restaurant.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- If time permits, or for future development
+    - A separate contact page.
+    - Email confirmations and calendar syncs.
+    - Automation to delete bookings when there are no-shows.
+    - Ability to edit menu items from the admin panel.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Constraints:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The main constraint is time. The project is being completed by a sole individual over 4 weeks with the Christmas holidays in the middle.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Agile Planning
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+##### Sprint 1 - 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+##### Sprint 2 - 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##### Sprint 3
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+##### Sprint 4
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Structure Plane
+#### Features/User Stories
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+### Skeleton Plane
 
-## FAQ about the uptime script
+#### Wireframes
 
-**Why have you added this script?**
+Wireframes were created to envisage how user can interact with the website in order to 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- simple interaction (not too many clicks, and only include necessary features)
+- allow the customer to get an overall feel for the restaurant as quickly as possible.
+- allow customer to review opening hours. 
+- allow customer to see restaurant location, contact information and social media links.
+- allow the customer to make a booking quickly.
+- to allow staff to easily review bookings.
+- to allow the staff user and designated staff to manage users and permissions.
 
-**How will this affect me?**
+ 
+ ##### Homepage - PC/Larger Screens
+ ##### Homepage - Homepage Smaller Devices
+ ##### Homepage - Logged in User
+ ##### Menu pages 
+ ##### My Account
+ ##### Create Account
+ ##### Booking Form
+ ##### Booking Success
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### Database Design
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Surface Plane
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+#### Design
 
-**Can I opt out?**
+#### Colour Palette
+#### Fonts
+#### Images
+#### Technologies
+- Balsamiq Wireframes
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Testing
+## Deployment
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Early Deployment
 
-**Anything more?**
+This project was deployed as part of the project set up, as advised in the "I think therefore I blog" walkthrough. This is to ensure that our main dependenices are installed and working from the outset. From there one can build the project on a solid foundation and reduce stress at the end of the project. 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The app was deployed with Heroku, ElepantSQL and Cloudinary
 
----
+#### Project set-up and deployment steps
 
-Happy coding!
+Install Django and supporting  libraries
+- Install Django
+- Install Cloudinary
+- Create requirements
+- Create project, "avec plaisir"
+- Create "home" app
+- Add home app to installed settings
+- Migrate changes to the DB and confirm success
+- Add project to the settings
+- Migrate to the database
+- Run http server to check if the installation was successful
+
+Connect to Heroku and ElephantSQL
+- Create Heroku App
+- Create new instance on Elephant SQL and copy DB url
+- Create env.py, adding the secret key. Ensure env.py is in gitignore
+- Import env.py into Settings, and edit secret key accordingly
+- Comment out original databases in Settings
+- Connect to ElephantSQL
+- Make migrations
+- Test connect to ElephantSQL was successful
+- Add config vars to Heroku
+
+Connect to Cloudinary
+- Add Cloudinary API environment variable to env.py
+- Add Cloudinary API environment variable to Heroku Config Vars
+- Add DISABLE_COLLECTSTATIC to Heroku config vars
+- In Settings,  "Installed Apps", add cloudinary_storage and cloudinary
+
+Set up Directories and deploy
+- In Settings, under STATIC_URL add STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage', and add STATICFILES_DIRS, STATIC_ROOT, MEDIA_URL, DEFAULT_FILE_STORAGE
+- Add Templates Directory under BASE_DIR in settings, and fill in brackets for "DIR": []
+- Add Heroku host name to ALLOWED_HOSTS
+- Add top level directories
+- Add a procfile
+- In Heroku, link to GitHub as the deployment method
+
+## Credits
+- Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
+- Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
