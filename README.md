@@ -9,6 +9,20 @@ The webpage was created as a restaurant management application to allow the site
 - Allow customers to make and manage their own bookings. 
 
 
+## Table of Contents
+* [Website Design](#website-design)
+    * [The Strategy Plane](#the-strategy-plane)
+    * [The Scope Plane](#the-scope-plane)
+        * [Agile Planning](#agile-planning)
+    * [The Skeleton Plan](#skeleton-plane)
+        * [Wireframes](#wireframes)
+        * [Database Design](#database-design)
+    * [The Surface Plane](#surface-plane)
+* [Technologies](#technologies)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
+
 ## WEBSITE DESIGN
 
 (REFERENCE USED - CI User Experience Essentials, "It's all about the user experience)
@@ -23,7 +37,8 @@ Why is the site needed? This is a website for a restaurant. The goals are to
 3. Allow customers to make and manage a reservation.
 4. Allow staff to easily make and manage their own bookings, menus and users.
 
-#### What might drive emotional factors?
+#### Emotional factors
+
 If the website looks attractive and runs efficiently, using few clicks and showing responsiveness, it is a good reflection of the restaurant's customer care and attention to detail as an overall part of the product they deliver ot customers, including the eventual food. 
 
 #### Target Audience
@@ -55,7 +70,7 @@ What are the most important features? What trade offs are needed
 
 
 
-### Scope
+### The Scope Plane
 
 Looking at the goals and use cases above, the following requirements were identified.
 
@@ -125,6 +140,8 @@ Wireframes were created to envisage how user can interact with the website in or
 
  ##### Booking Form
  ![booking form](docs/wireframes/booking.JPG)
+ 
+ 
  ##### Booking Success
 
 #### Database Design
@@ -138,7 +155,7 @@ Wireframes were created to envisage how user can interact with the website in or
 #### Colour Palette
 #### Fonts
 #### Images
-#### Technologies
+## Technologies
 - Balsamiq Wireframes
 
 ## Testing
