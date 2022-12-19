@@ -122,8 +122,9 @@ Wireframes were created to envisage how user can interact with the website in or
 
  ##### Create Account
  ![create or edit account page](docs/wireframes/my-account.JPG)
- 
+
  ##### Booking Form
+ ![booking form](docs/wireframes/booking.JPG)
  ##### Booking Success
 
 #### Database Design
