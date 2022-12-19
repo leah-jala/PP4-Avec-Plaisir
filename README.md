@@ -106,11 +106,23 @@ Wireframes were created to envisage how user can interact with the website in or
 
  
  ##### Homepage - PC/Larger Screens
+ ![homepage](docs/wireframes/Homepage-pc.JPG)
+
  ##### Homepage - Homepage Smaller Devices
+![homepage small](docs/wireframes/hompage-small.JPG)
+
  ##### Homepage - Logged in User
+ ![homepage logged in user](docs/wireframes/hompage-logged-in.JPG)
+
  ##### Menu pages 
+ ![menu pages](docs/wireframes/menus.JPG)
+
  ##### My Account
+ ![my account page](docs/wireframes/my-account.JPG)
+
  ##### Create Account
+ ![create or edit account page](docs/wireframes/my-account.JPG)
+ 
  ##### Booking Form
  ##### Booking Success
 
