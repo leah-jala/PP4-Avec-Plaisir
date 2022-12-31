@@ -6,6 +6,9 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
 .navbar {
     z-index: 1;
 }
@@ -32,8 +35,27 @@ body {
     padding-left: 20px;
 }
 
+.footer-logo {
+    color:#efd485;
+}
+.footer-address {
+    color:#efd485;
+}
+
 .nav-colors {
     color:#efd485;
+    font: 10px;
+}
+
+
+.footer-font {
+    font-family: "Allura", cursive;
+    font-size: 30px;
+}
+
+.footer-font-two {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
 }
 
 #logo-text {
@@ -41,7 +63,6 @@ body {
     font-size: 80px;
 }
   
-
 h2 {
     font-size: 30px;
 }
