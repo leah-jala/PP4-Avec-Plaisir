@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 
 def get_homepage(request):
-    return render(request, "home/base.html")
+    return render(request, "home/index.html")
