@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Lato&display=swap');
+
 body {
-    background-color: black;
+    background-color: #6c5736;
+    color: #efd485;
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+
+
+.hero-image {
+    z-index: 2;
+    padding-top: 60px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.webp");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    position: relative;
+    overflow: auto;
+}
+
+#logo {
+    font-family: 'Allura', cursive;
+    color:#efd485;
+    font-size: 60px;
+    padding-left: 20px;
+}
+
+.nav-colors {
+    color:#efd485;
+}
+
+#logo-text {
+    font-family: 'Allura', cursive;
+    font-size: 80px;
+}
+  
+
+h2 {
+    font-size: 30px;
+}
+
+.cover-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    background-size: cover !important;
+    background: radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 37%, rgba(0,0,0,0.65) 100%);
+}
+
+.btn {
+    margin-top: 20px;
 }
