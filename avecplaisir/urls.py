@@ -20,5 +20,5 @@ from home.views import get_homepage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_homepage, name="homepage"),
-    path('accounts', include('allauth.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
