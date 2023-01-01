@@ -3,7 +3,53 @@
 {% block content %}
 
 <div class="menus">
-  <h1>The menus will go here</h1>
+  <h1>Our Menus</h1>
 </div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card">
+        <img src="/static/images/brunch.webp" class="card-img-top"
+          alt="Los Angeles Skyscrapers" />
+        <div class="card-body">
+          <h5 class="card-title text-center">Brunch</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+            additional content.</p>
+          <div class="text-center">
+            <a href="https://www.google.com/" class="btn btn-outline-light btn-sm stretched-link">Brunch Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/static/images/lunch.webp" class="card-img-top"
+          alt="Los Angeles Skyscrapers" />
+        <div class="card-body">
+          <h5 class="card-title text-center">Lunch</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+            additional content.</p>
+          <div class="text-center">
+            <a href="https://www.google.com/" class="btn btn-outline-light btn-sm stretched-link">Lunch Menu</a>
+          </div>
 
-{%endblock%}
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/static/images/dinner.webp" class="card-img-top"
+          alt="Los Angeles Skyscrapers" />
+        <div class="card-body">
+          <h5 class="card-title text-center">Diner</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+            additional content.</p>
+          <div class="text-center">
+            <a href="https://www.google.com/" class="btn btn-outline-light btn-sm stretched-link">Dinner Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%endblock%}
