@@ -29,20 +29,24 @@
                         <span class="nav-colors">Menus</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Brunch</a></li>
+                        <li><a class="dropdown-item" href="#">Breakfast</a></li>
                         <li><a class="dropdown-item" href="#">Lunch</a></li>
                         <li><a class="dropdown-item" href="#">Dinner</a></li>
                     </ul>
                 </li>
                 <li class="dropdown-item"><a class="nav-link" href="#"><span class="nav-colors">Reservations</span></a>
                 </li>
-                <li class="dropdown-item"><a class="nav-link" href="#"><span class="nav-colors">Sign Up</span></a></li>
-                <li class="dropdown-item"><a class="nav-link" href="#"><span class="nav-colors">Sign In</span></a></li>
+                {% if user.is_authenticated %}
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_logout' %}"><span class="nav-colors">Sign out</span></a></li>
+                {% else %}
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_signup' %}"><span class="nav-colors">Register</span></a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_login' %}"><span class="nav-colors">Log In</span></a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
     <!-- End Nav Bar-->
-    <!-- Hero -->
+    <!-- Hero -
     <div class="hero-image">
         <div class="container">
 
