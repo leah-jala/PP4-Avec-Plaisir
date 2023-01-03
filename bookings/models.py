@@ -13,7 +13,7 @@ BOOKING_TIMES = (
 
 class Table(models.Model):
     table_id = models.IntegerField(unique=True)
-    table_size = models.IntegerField(choices=TABLE_SIZE, default=1)
+    table_size = models.IntegerField(choices=TABLE_SIZE, default=2)
     minimum = models.IntegerField()
     maximum = models.IntegerField()
 
