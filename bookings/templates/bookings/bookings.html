@@ -1,7 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% load crispy_forms_tags %}
 
-<h1>This will be the bookings page</h1>
 
-{%endblock%}
+
+{% if user.is_authenticated %}
+
+<div class="container">
+    <h1>Reservations</h1>
+    <h3>We look forward to serving you, {{ user.first_name }}!</h3>
+    <form method="POST">
+        {{ reservation_form | crispy}}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
+    </form>
+</div>
+{% else %}
+Hello, guest! Please register first to make an online booking.
+{% endif %}
+
+{% endblock %}

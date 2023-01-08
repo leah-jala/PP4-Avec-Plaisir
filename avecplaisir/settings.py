@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'phonenumbers',
     'cloudinary',
+    'crispy_forms',
     # Custom apps
     'home',
     'bookings',
@@ -103,6 +104,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 WSGI_APPLICATION = 'avecplaisir.wsgi.application'
 
