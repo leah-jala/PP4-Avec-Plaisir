@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import get_homepage
+from bookings.views import get_booking_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_homepage, name="homepage"),
     path('accounts/', include('allauth.urls')),
+    path('bookings/', get_booking_page, name="bookings")
 ]
