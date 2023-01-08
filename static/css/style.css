@@ -9,16 +9,18 @@ body {
 
 a {
     text-decoration: none;
+    
 }
 
 /* 1.1 navbar */
 .navbar {
     z-index: 10;
+    color: #efd485;
+    padding: 0;
 }
 
-.nav-colors {
+.nav-link {
     color: #efd485;
-    font: 10px;
 }
 
 #logo {
@@ -81,11 +83,8 @@ h2 {
     color: #efd485;
 }
 
-.footer-address {
-    color: #efd485;
-}
-
 .footer-font {
+    color: #efd485;
     font-family: "Allura", cursive;
     font-size: 30px;
 }
