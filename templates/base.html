@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse justify-content-left" id="navbarNavDropdown">
             <ul class="navbar-nav justify-content-right">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><span class="nav-colors">Home</span></a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}"><span class="nav-colors">Home</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -34,7 +34,7 @@
                         <li><a class="dropdown-item" href="#">Dinner</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-item"><a class="nav-link" href="#"><span class="nav-colors">Reservations</span></a>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'bookings' %}"><span class="nav-colors">Reservations</span></a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'account_logout' %}"><span class="nav-colors">Sign out</span></a></li>
