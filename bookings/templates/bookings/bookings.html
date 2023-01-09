@@ -10,7 +10,7 @@
 <div class="container">
     <h1>Reservations</h1>
     <h3>We look forward to serving you, {{ user.first_name }}!</h3>
-    <form method="post">
+    <form method="post" autocomplete="off">
         {{ reservation_form | crispy}}
         {% csrf_token %}
         <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
@@ -20,4 +20,12 @@
 Hello, guest! Please register first to make an online booking.
 {% endif %}
 
+<script>
+    $(function () {
+      $("#id_reservation_date").datepicker();
+    });
+  </script>
+  
 {% endblock %}
+
+<!-- credit - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html -->

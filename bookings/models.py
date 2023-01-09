@@ -33,7 +33,7 @@ class Reservation(models.Model):
     )
     guest_name = models.CharField(max_length=20)
     phone = PhoneNumberField(blank=True)
-    reservation_date = models.DateField()
+    reservation_date = models.CharField(max_length=10)
     reservation_time = models.IntegerField(choices=BOOKING_TIMES, default=1)
     number_guests = models.IntegerField()
     booked_table = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="booked_table")

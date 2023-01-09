@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'phonenumbers',
     'cloudinary',
     'crispy_forms',
+
     # Custom apps
     'home',
     'bookings',

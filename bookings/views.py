@@ -23,17 +23,3 @@ def save_form(request):
         form = ReservationForm()
         return render(request, 'bookings/bookings.html', {'form': form})
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.helper = FormHelper()
-        self.helper.layout = Layout(
-            Row(
-                Column('guest_name', css_class='form-group col-md-6 mb-0'),
-                Column('phone', css_class='form-group col-md-6 mb-0'),
-            ),
-            'reservation_date',
-            'reservation_time',
-            'number_guests',
-            'special_requests',
-            Submit('submit', 'Submit', css_class='btn btn-primary')
-        )
