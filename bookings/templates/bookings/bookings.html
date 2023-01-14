@@ -10,7 +10,7 @@
 <div class="container">
     <h1>Reservations</h1>
     <h3>We look forward to serving you, {{ user.first_name }}!</h3>
-    <form method="post" autocomplete="off">
+    <form method="POST" autocomplete="off">
         {{ form | crispy}}
         {% csrf_token %}
         <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
