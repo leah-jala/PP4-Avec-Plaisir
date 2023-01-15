@@ -63,13 +63,12 @@ a {
     background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 37%, rgba(0, 0, 0, 0.65) 100%);
 }
 
-h1 {
+h1, h2, h3 {
     color: #efd485;
 }
 
 h2 {
     font-size: 30px;
-    color: #efd485;
 }
 
 .btn {
@@ -79,9 +78,12 @@ h2 {
     background-color: #6c5736;
 }
 
-.alert {
-    max-width: fit-content;
-}
+/* .card .btn:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+} */
+
+
 
 /*  Footer */
 
@@ -111,6 +113,7 @@ h2 {
 
 .card {
     background: #efd485;
+    padding: 20px;
 }
 
 p.card-text {
