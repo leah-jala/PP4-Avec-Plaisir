@@ -8,24 +8,25 @@
 {% if user.is_authenticated %}
 
 <div class="container">
-    <h1>Reservations</h1>
-    <h3>We look forward to serving you, {{ user.first_name }}!</h3>
-    <form method="POST" autocomplete="off">
-        {{ form | crispy}}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
-    </form>
+  <h1>Reservations</h1>
+  <h3>We look forward to serving you, {{ user.first_name }}!</h3>
+  
+  <form method="POST" autocomplete="off">
+    {{ form | crispy}}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
+  </form>
 </div>
 {% else %}
 Hello, guest! Please register first to make an online booking.
 {% endif %}
 
 <script>
-    $(function () {
-      $("#id_reservation_date").datepicker();
-    });
-  </script>
-  
+  $(function () {
+    $("#id_reservation_date").datepicker();
+  });
+</script>
+
 {% endblock %}
 
-<!-- credit - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html -->
+<!-- credit for datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html -->

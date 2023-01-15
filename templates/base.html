@@ -61,7 +61,19 @@
         </div>
     </nav>
     <!-- End Nav Bar-->
-
+    {% if messages %}
+    <div class="container alert alert-warning alert-dismissible fade show text-center fix" role="alert">
+        <div class="row"> 
+            <div class="col align-self-center">
+                {% for message in messages %}
+                {{ message}}
+                {% endfor %}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+       
+    </div>
+    {% endif %}
 
 
     <main class="flex-shrink-0 main-bg">
