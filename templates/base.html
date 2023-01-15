@@ -46,9 +46,11 @@
                     </ul>
                 </li>
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'create_reservation' %}"><span
-                            class="nav-colors">Reservations</span></a>
+                            class="nav-colors">Book a Table</span></a>
                 </li>
                 {% if user.is_authenticated %}
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'view_reservations' %}"><span
+                            class="nav-colors">My Reservations</span></a></li>
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'account_logout' %}"><span
                             class="nav-colors">Sign out</span></a></li>
                 {% else %}
@@ -63,7 +65,7 @@
     <!-- End Nav Bar-->
     {% if messages %}
     <div class="container alert alert-warning alert-dismissible fade show text-center fix" role="alert">
-        <div class="row"> 
+        <div class="row">
             <div class="col align-self-center">
                 {% for message in messages %}
                 {{ message}}
@@ -71,7 +73,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
-       
+
     </div>
     {% endif %}
 

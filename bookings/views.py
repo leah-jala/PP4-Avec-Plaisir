@@ -49,4 +49,4 @@ class ViewReservations(LoginRequiredMixin, ListView):
         Filters out the user's reservations
         """
         user = self.request.user
-        return Reservation.objects.filter(user=user).order_by("-reservation_date")
+        return Reservation.objects.filter(user=user).order_by("reservation_date")
