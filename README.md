@@ -209,3 +209,5 @@ Set up Directories and deploy
 ## Credits
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
+- Style the Login Page with Bootstrap - Django Blog #35
+https://www.youtube.com/watch?v=0Z_3APyKwQ4

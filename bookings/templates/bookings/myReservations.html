@@ -2,19 +2,6 @@
 {% block content %}
 {% if user.is_authenticated %}
 
-{% if messages %}
-    <div class="container alert alert-warning alert-dismissible fade show text-center fix" role="alert">
-        <div class="row">
-            <div class="col align-self-center">
-                {% for message in messages %}
-                {{ message}}
-                {% endfor %}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        </div>
-
-    </div>
-{% endif %}
 
 <div class="container">
     <h1 class="display-4">{{ user.first_name }}'s Reservations</h1>
@@ -30,7 +17,7 @@
                     <p>Time: {{ reservation.get_reservation_time_display }}</p>
                 </div>
                 <div class="col">
-                    
+                    <p>Party Name: {{ reservation.guest_name }}</p>
                 </div>
                 <div class="col">
                     <p>Number of guests: {{ reservation.number_guests }}</p>
@@ -53,7 +40,8 @@
 {% endfor %}
 
 {% else %}
-Hello, guest! Please sign-in to view your reservations.
+<div class="container">Hello, guest! Please sign-in to view your reservations.</div>
+
 {% endif %}
 {% endblock %}
 

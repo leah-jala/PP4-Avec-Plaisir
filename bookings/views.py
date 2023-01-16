@@ -5,8 +5,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import  CreateView, UpdateView, DeleteView, ListView
 from .models import Reservation, Table
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Submit, Row, Column
 from .forms import ReservationForm
 
 
@@ -16,7 +14,7 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
     """
     template_name = 'bookings/bookings.html'
     form_class = ReservationForm
-    success_url = reverse_lazy('homepage')
+    success_url = reverse_lazy('view_reservations')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -61,11 +59,16 @@ class EditReservationView(LoginRequiredMixin, UpdateView):
         form.instance.user = self.request.user
         self.object = form.save()
         return super(EditReservationView, self).form_valid(form)
-    
+        
     def get_success_message(self, cleaned_data):
+        print(cleaned_data)
         return "Your reservation was successfully updated."
 
 class DeleteReservationView(DeleteView):
     model = Reservation
     template_name = 'bookings/delete_reservation.html'
-    success_url = reverse_lazy('homepage')
+    success_url = reverse_lazy('view_reservations')
+
+    def get_success_message(self, cleaned_data):
+        print(cleaned_data)
+        return "Your reservation has been deleted. We hope to see you soon."

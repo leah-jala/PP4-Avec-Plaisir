@@ -1,11 +1,16 @@
 {% extends "base.html" %}
-
-{% block content %}
 {% load crispy_forms_tags %}
 
-<form method="post">{% csrf_token %}
-    <p>Are you sure you want to delete "{{ object }}"?</p>
-    {{ form }}
-    <input type="submit" value="Confirm">
-</form>
+{% block content %}
+
+<div class="container">
+    <form method="POST">
+        {{ form | crispy}}
+        {% csrf_token %}
+        <p>Are you sure you want to delete 
+            your reservation on "{{ reservation.reservation_date }}"?</p>    
+        <input type="submit" value="Confirm">
+    </form>
+</div>
+
 {% endblock %}

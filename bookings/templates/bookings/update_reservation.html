@@ -1,9 +1,15 @@
 {% extends "base.html" %}
-
 {% block content %}
 {% load crispy_forms_tags %}
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Update">
-</form>
+
+<div class="container">
+    <h1>Amend your booking</h1>
+    <h3>Simply edit the fields below and click "submit".</h3>
+    <form method="POST">
+        {{ form | crispy}}
+        {% csrf_token %}
+        <input type="submit" value="Update">
+    </form>
+</div>
+
 {% endblock %}
