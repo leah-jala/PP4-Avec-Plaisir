@@ -27,6 +27,7 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
         form.instance.number_guests = form.cleaned_data['number_guests']
         form.instance.special_requests = form.cleaned_data['special_requests']
         form.instance.booked_table_id = Table.objects.first().pk  # temporarily get tables from database
+        form.instance.last_updated = datetime.now()
         self.object = form.save()
         return super(CreateReservationView, self).form_valid(form)
     
@@ -52,7 +53,7 @@ class ViewReservations(LoginRequiredMixin, ListView):
         return Reservation.objects.filter(user=user).order_by("reservation_date")
 
 
-class editReservationView(LoginRequiredMixin, UpdateView):
+class EditReservationView(LoginRequiredMixin, UpdateView):
     model = Reservation
     form_class = ReservationForm
     template_name = "bookings/update_reservation.html"
@@ -65,3 +66,8 @@ class editReservationView(LoginRequiredMixin, UpdateView):
     
     def get_success_message(self, cleaned_data):
         return "Your reservation was successfully updated."
+
+class DeleteReservationView(DeleteView):
+    model = Reservation
+    template_name = 'bookings/delete_reservation.html'
+    success_url = reverse_lazy('view_reservations')

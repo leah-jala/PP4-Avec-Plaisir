@@ -10,15 +10,17 @@ class Reservation(admin.ModelAdmin):
         'guest_name',
         'number_guests',
         'special_requests',
+        'last_updated',
     )
 
-    search_fields = ['guest_name']
+    search_fields = ['guest_name',]
 
 
     list_filter = (
         'guest_name',
         'reservation_date',
         'reservation_time',
+        'last_updated',
     )
 
 @admin.register(Table)
