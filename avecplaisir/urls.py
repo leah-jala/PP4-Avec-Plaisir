@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import get_homepage
-from bookings.views import CreateReservationView, ViewReservations
+from bookings.views import CreateReservationView, ViewReservations, editReservationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('bookings/', CreateReservationView.as_view(), name='create_reservation'),
     path('myReservations/', ViewReservations.as_view(), name='view_reservations'),
+    path('update/<int:pk>/', editReservationView.as_view(), name='update_reservation'),
 ]

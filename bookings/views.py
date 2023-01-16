@@ -42,7 +42,7 @@ class ViewReservations(LoginRequiredMixin, ListView):
     model = Reservation
     template_name = 'bookings/myReservations.html'
     context_object_name = 'reservations'
-    ordering = ["-reservation_date"]
+    ordering = ["reservation_date"]
 
     def get_queryset(self):
         """
@@ -50,3 +50,18 @@ class ViewReservations(LoginRequiredMixin, ListView):
         """
         user = self.request.user
         return Reservation.objects.filter(user=user).order_by("reservation_date")
+
+
+class editReservationView(LoginRequiredMixin, UpdateView):
+    model = Reservation
+    form_class = ReservationForm
+    template_name = "bookings/update_reservation.html"
+    success_url = reverse_lazy('view_reservations')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        self.object = form.save()
+        return super(editReservationView, self).form_valid(form)
+    
+    def get_success_message(self, cleaned_data):
+        return "Your reservation was successfully updated."
