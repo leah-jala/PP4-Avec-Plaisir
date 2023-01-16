@@ -5,14 +5,15 @@
 body {
     background-color: #6c5736;
     font-family: 'Lato', sans-serif;
+    color: #efd485;
+
 }
 
 a {
     text-decoration: none;
-    
 }
 
-/* 1.1 navbar */
+/* 2. navbar */
 .navbar {
     z-index: 10;
     color: #efd485;
@@ -30,7 +31,7 @@ a {
     padding-left: 20px;
 }
 
-/* 1.2 hero image and text overlay */
+/* 3. hero image and text overlay */
 #logo-text {
     font-family: 'Allura', cursive;
     font-size: 80px;
@@ -85,7 +86,7 @@ h2 {
 
 
 
-/*  Footer */
+/*  4. Footer */
 
 .footer-logo {
     color: #efd485;
@@ -102,7 +103,7 @@ h2 {
     font-size: 20px;
 }
 
-/* 2. Index.html page */
+/* 5. Index.html page */
 
 .menus {
     padding-top: 20px;
