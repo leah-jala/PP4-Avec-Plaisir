@@ -42,7 +42,7 @@ class Reservation(models.Model):
     reservation_time = models.IntegerField(choices=BOOKING_TIMES, default=1)
     number_guests = models.IntegerField(choices=NUMBER_GUESTS, default=1)
     booked_table = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="booked_table")
-    special_requests = models.TextField()
+    special_requests = models.TextField(blank=True)
     last_updated = models.DateTimeField(auto_now=True)
     class Meta:
         ordering = ["reservation_date", "reservation_time", "booked_table"]

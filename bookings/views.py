@@ -7,6 +7,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import  CreateView, UpdateView, DeleteView, ListView
 from .models import Reservation, Table
 from .forms import ReservationForm
+from datetime import datetime
 
 
 class CreateReservationView(SuccessMessageMixin, CreateView):
@@ -25,6 +26,19 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
         form.instance.reservation_time = form.cleaned_data['reservation_time']
         form.instance.number_guests = form.cleaned_data['number_guests']
         form.instance.special_requests = form.cleaned_data['special_requests']
+
+        converted_time = form.instance.reservation_time[1]
+
+        # # Convert the reservation date and time to datetime
+        # reservation_datetime = datetime.strptime(
+        #     f"{form.instance.reservation_date} {converted_time}",
+        #     '%m-%d-%Y %H:%M')
+
+        # # Compare the reservation datetime to the current datetime
+        # if reservation_datetime < datetime.now():
+        #     form.add_error(
+        #         'reservation_date','Reservation date and time must be in the future.')
+        #     return self.form_invalid(form)
 
         # Filter the Reservations table for tables already booked at desired time.
         already_booked_tables = Reservation.objects.filter(
