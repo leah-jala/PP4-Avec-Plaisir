@@ -27,18 +27,29 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
         form.instance.number_guests = form.cleaned_data['number_guests']
         form.instance.special_requests = form.cleaned_data['special_requests']
 
-        converted_time = form.instance.reservation_time[1]
+        booking_times = (
+            (1, "10:00"), (2, "10:30"), (3, "11:00"),
+            (4, "11:30"), (5, "12:00"), (6, "12:30"),
+            (7, "13:00"), (8, "13:30"), (9, "14:00"),
+            (10, "17:00"), (11, "17:30"),(12, "18:00"),
+            (13, "18:30"), (14, "19:00"),(15, "19:30"),
+        )
 
-        # # Convert the reservation date and time to datetime
-        # reservation_datetime = datetime.strptime(
-        #     f"{form.instance.reservation_date} {converted_time}",
-        #     '%m-%d-%Y %H:%M')
+        # Convert the reservation date and time to datetime
+        time = form.instance.reservation_time
+        for time in booking_times:
+            if time == booking_times[0]:
+                converted_time = time[1]
 
-        # # Compare the reservation datetime to the current datetime
-        # if reservation_datetime < datetime.now():
-        #     form.add_error(
-        #         'reservation_date','Reservation date and time must be in the future.')
-        #     return self.form_invalid(form)
+        reservation_datetime = datetime.strptime(
+            f"{form.instance.reservation_date} {converted_time}",
+            '%m/%d/%Y %H:%M')
+        
+        # Compare the reservation datetime to the current datetime
+        if reservation_datetime < datetime.now():
+            form.add_error(
+                'reservation_date','Reservation date and time must be in the future.')
+            return self.form_invalid(form)
 
         # Filter the Reservations table for tables already booked at desired time.
         already_booked_tables = Reservation.objects.filter(
