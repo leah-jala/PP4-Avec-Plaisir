@@ -12,6 +12,11 @@ BOOKING_TIMES = (
     (13, "18:30"), (14, "19:00"),(15, "19:30"),
 )
 
+NUMBER_GUESTS = (
+    (1, 1), (2, 2), (3, 3),(4, 4),
+    (5, 5), (6, 6), (7,7), (8,8)
+    )
+
 class Table(models.Model):
     """ Model for to define restaurant tables """
     table_id = models.IntegerField(unique=True)
@@ -35,7 +40,7 @@ class Reservation(models.Model):
     phone = PhoneNumberField(blank=True)
     reservation_date = models.CharField(max_length=10)
     reservation_time = models.IntegerField(choices=BOOKING_TIMES, default=1)
-    number_guests = models.IntegerField()
+    number_guests = models.IntegerField(choices=NUMBER_GUESTS, default=1)
     booked_table = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="booked_table")
     special_requests = models.TextField()
     last_updated = models.DateTimeField(auto_now=True)

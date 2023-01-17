@@ -159,6 +159,23 @@ Wireframes were created to envisage how user can interact with the website in or
 - Balsamiq Wireframes
 
 ## Testing
+
+### Create an account
+
+### CreateReservationView Tests
+- The user can access the view and see the reservation form
+    True - manually tested
+- The form is valid and can create a new reservation
+    True - reservations are posted to the datbase.
+- The form is invalid and doesn't create a new reservation
+    True - The form will not submit until all required fields have valid entries. 
+- The view redirects to the correct URL after a reservation is made
+    True - After the form submits, the user is directed to "My Reservations" where they can see the new entry.
+- A success message is displayed after a reservation is made
+    True - The message is show at the top of the "My Reservations"" page.
+
+
+
 ## Deployment
 
 ### Early Deployment
