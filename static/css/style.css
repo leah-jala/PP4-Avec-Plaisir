@@ -3,14 +3,18 @@
 /* 1. Base.html page and common to all pages */
 
 body {
-    background-color: #6c5736;
+    background-color: #645132;
     font-family: 'Lato', sans-serif;
 }
 
 a {
     text-decoration: none;
+    color:antiquewhite;
 }
 
+a:hover {
+    color:#efd485;
+}
 /* 2. navbar */
 .navbar {
     z-index: 10;
@@ -84,6 +88,10 @@ h2 {
 
 .card p {
     color: black;
+}
+
+form {
+    color: #efd485;
 }
 
 /*  4. Footer */
