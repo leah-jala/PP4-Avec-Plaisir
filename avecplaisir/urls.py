@@ -16,14 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import get_homepage
-from bookings.views import CreateReservationView, ViewReservations, EditReservationView, DeleteReservationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_homepage, name="homepage"),
     path('accounts/', include('allauth.urls')),
-    path('bookings/', CreateReservationView.as_view(), name='create_reservation'),
-    path('myReservations/', ViewReservations.as_view(), name='view_reservations'),
-    path('update/<int:pk>/', EditReservationView.as_view(), name='update_reservation'),
-    path('delete/<int:pk>/', DeleteReservationView.as_view(), name='delete_reservation'),
+    path('bookings/', include('bookings.urls')),
 ]
