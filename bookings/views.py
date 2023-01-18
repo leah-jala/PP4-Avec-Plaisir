@@ -36,7 +36,7 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
             (13, "18:30"), (14, "19:00"),(15, "19:30"),
         )
 
-        # Convert the reservation date and time to datetime
+        # Convert the reservation date and time string fields to datetime
         time = form.instance.reservation_time
         for time in booking_times:
             if time == booking_times[0]:
@@ -107,9 +107,6 @@ class EditReservationView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
         self.object = form.save()
         return super(EditReservationView, self).form_valid(form)
         
-    # def get_success_message(self, cleaned_data):
-    #     print(cleaned_data)
-    #     return "Your reservation was successfully updated."
 
 class DeleteReservationView(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
     model = Reservation

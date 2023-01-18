@@ -27,7 +27,7 @@
 <body>
     <!-- Nav Bar-->
     <nav class="navbar  navbar-expand-lg navbar-dark bg-transparent">
-        <a class="navbar-brand" href="#"><span id="logo">A</span></a>
+        <a class="navbar-brand" href="{% url 'homepage' %}"><span id="logo">A</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse justify-content-left" id="navbarNavDropdown">
             <ul class="navbar-nav justify-content-right">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}"><span
+                    <a class="nav-link" aria-current="page" href="{% url 'homepage' %}"><span
                             class="nav-colors">Home</span></a>
                 </li>
                 <li class="nav-item dropdown">
@@ -91,7 +91,7 @@
     </main>
 
     <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-start py-3 my-4 border-top border-warning">
+        <footer class="d-flex flex-wrap justify-content-between align-items-start py-3 my-4">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="#" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                     <span class="footer-font">Avec Plaisir</span></a>
@@ -134,7 +134,40 @@
           $("#id_reservation_date").datepicker();
         });
       </script>
+    <!-- <script>
+        $(document).ready(function() {
+            var current = window.location.pathname;
+            $('.navbar-nav li a').each(function(){
+                var $this = $(this);
+                // if the current path is like this link, make it active
+                if($this.attr('href').indexOf(current) !== -1){
+                    $this.addClass('active');
+                }
+            })
+        });
+    </script> -->
+    
+    <!-- <script>
+        $(document).ready(function() {
+            var path = window.location.pathname;
+            $(".navbar-nav li a").filter(function() {
+                return this.pathname === path;
+            }).addClass("active");
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            var path = window.location.pathname;
+            $(".navbar-nav li a").removeClass("active").filter(function() {
+                return this.pathname === path;
+            }).addClass("active");
+        });
+    </script>
+    
+    
 
 </body>
 
 </html>
+
+<!-- https://stackoverflow.com/questions/35427641/how-to-dynamically-set-the-active-class-in-bootstrap-navbar -->

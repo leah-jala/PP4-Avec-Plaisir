@@ -95,6 +95,9 @@ form {
 }
 
 /*  4. Footer */
+footer {
+    border-top: 1px solid #efd485;
+}
 
 .footer-logo {
     color: #efd485;
