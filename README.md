@@ -226,4 +226,4 @@ Set up Directories and deploy
 ## Credits
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
-- 
+- Datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html

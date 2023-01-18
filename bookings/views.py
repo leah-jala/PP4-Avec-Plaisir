@@ -16,6 +16,7 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
     """
     template_name = 'bookings/bookings.html'
     form_class = ReservationForm
+    success_message = "Your reservation was successfully submitted."
     success_url = reverse_lazy('view_reservations')
 
     def form_valid(self, form):
@@ -76,11 +77,6 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
             messages.error(self.request, "No tables are available for the selected date and time.")
             return super(CreateReservationView, self).form_invalid(form)
 
-    
-    def get_success_message(self, cleaned_data):
-        print(cleaned_data)
-        return "Your reservation was successfully submitted."
-
 
 class ViewReservations(LoginRequiredMixin, ListView):
     """
@@ -99,10 +95,11 @@ class ViewReservations(LoginRequiredMixin, ListView):
         return Reservation.objects.filter(user=user).order_by("reservation_date")
 
 
-class EditReservationView(LoginRequiredMixin, UpdateView):
+class EditReservationView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = Reservation
     form_class = ReservationForm
     template_name = "bookings/update_reservation.html"
+    success_message = "Your reservation was successfully updated."
     success_url = reverse_lazy('view_reservations')
 
     def form_valid(self, form):
@@ -110,15 +107,16 @@ class EditReservationView(LoginRequiredMixin, UpdateView):
         self.object = form.save()
         return super(EditReservationView, self).form_valid(form)
         
-    def get_success_message(self, cleaned_data):
-        print(cleaned_data)
-        return "Your reservation was successfully updated."
+    # def get_success_message(self, cleaned_data):
+    #     print(cleaned_data)
+    #     return "Your reservation was successfully updated."
 
-class DeleteReservationView(DeleteView):
+class DeleteReservationView(SuccessMessageMixin, LoginRequiredMixin, DeleteView):
     model = Reservation
     template_name = 'bookings/delete_reservation.html'
     success_url = reverse_lazy('view_reservations')
-
-    def get_success_message(self, cleaned_data):
-        print(cleaned_data)
-        return "Your reservation has been deleted. We hope to see you soon."
+    success_message = "Reservation was successfully deleted."
+    
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, self.success_message)
+        return super().delete(request, *args, **kwargs)
