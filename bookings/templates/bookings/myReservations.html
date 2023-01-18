@@ -1,48 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 {% if user.is_authenticated %}
-
-
 <div class="container">
     <h1 class="display-4">{{ user.first_name }}'s Reservations</h1>
     <h3 class="lead">We look forward to serving you!</h3>
 </div>
-{% for reservation in reservations %}
-<div class="container">
-    <div class="jumbtron">
-        <div class="card">
-            <div class="row">
-                <div class="col">
-                    <p><strong>{{ reservation.reservation_date }}</strong> </p>
-                    <p>Time: {{ reservation.get_reservation_time_display }}</p>
-                </div>
-                <div class="col">
-                    <p>Party Name: {{ reservation.guest_name }}</p>
-                </div>
-                <div class="col">
-                    <p>Number of guests: {{ reservation.number_guests }}</p>
+    {% if reservations %}
+        {% for reservation in reservations %}
+        <div class="container">
+            <div class="jumbtron">
+                <div class="card">
+                    <div class="row">
+                        <div class="col">
+                            <p><strong>{{ reservation.reservation_date }}</strong> </p>
+                            <p>Time: {{ reservation.get_reservation_time_display }}</p>
+                        </div>
+                        <div class="col">
+                            <p>Party Name: {{ reservation.guest_name }}</p>
+                        </div>
+                        <div class="col">
+                            <p>Number of guests: {{ reservation.number_guests }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Special requests: {{ reservation.special_requests }}</p>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <a href="{% url 'update_reservation' reservation.pk %}"
+                                class="btn btn-outline-light btn-sm">Edit</a>
+                            <a href="{% url 'delete_reservation' reservation.pk %}"
+                                class="btn btn-outline-light btn-sm">Delete</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <p>Special requests: {{ reservation.special_requests }}</p>
-            </div>
-            <div class="row align-items-start">
-                <div class="col">
-                    <a href="{% url 'update_reservation' reservation.pk %}" class="btn btn-outline-light btn-sm">Edit</a>
-                    <a href="{% url 'delete_reservation' reservation.pk %}" class="btn btn-outline-light btn-sm">Delete</a>
-                </div>
-            </div>
+            <hr class="my-4">
         </div>
+    {% endfor %}
+    {% else %}
+    <div class="container mt-4">
+        <p>You haven't made any reservations yet. Please click the button below
+            to make a reservation, or give us a call if you need assistance.</p> 
+        <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
+        <a class="btn btn-outline-light btn-lg" aria-current="page" href="{% url 'create_reservation' %}">
+            <span class="nav-colors">Cancel</span></a>
     </div>
-    <hr class="my-4">
-</div>
-
-{% endfor %}
-
+    
+    {% endif %}
 {% else %}
 <div class="container">Hello, guest! Please sign-in to view your reservations.</div>
-
 {% endif %}
 {% endblock %}
-
-<!-- Replace Href with {% url 'edit_reservation' reservation.pk %} after view is created. -->
