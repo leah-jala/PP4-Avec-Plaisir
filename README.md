@@ -158,6 +158,10 @@ Wireframes were created to envisage how user can interact with the website in or
 ## Technologies
 - Balsamiq Wireframes
 
+## Technologies
+
+- Photo converter: https://cloudconvert.com/jpg-to-webp
+
 ## Testing
 
 ### Create an account
@@ -223,7 +227,10 @@ Set up Directories and deploy
 - Add a procfile
 - In Heroku, link to GitHub as the deployment method
 
+
 ## Credits
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
 - Datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
+- Photos from Pexels.com
+    - Wine bottles: Stanislav Kondratiev

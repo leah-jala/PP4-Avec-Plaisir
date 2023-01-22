@@ -6,7 +6,7 @@
 
 {% if user.is_authenticated %}
 
-<div class="container">
+<div class="container"> 
   <h1>Reservations</h1>
   <h3>We look forward to serving you, {{ user.first_name }}!</h3>
   
@@ -24,6 +24,7 @@
   <p>You need to <a href="{% url 'account_login' %}">sign in</a> to make a reservation. If you don't have an account
     yet, please <a href="{% url 'account_signup' %}">sign up</a> here.</p>
   </h3>
+</div>
 </div>
 
 {% endif %}

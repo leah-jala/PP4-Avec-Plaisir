@@ -3,11 +3,51 @@
 {% block content %}
 
 
-<section class="menus">
+<section class="menus" id="menus">
   <h1>Our Menus</h1>
 </section>
 <div class="container">
-    <h2>Some text goes here</h2>
-</div>
+  <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card">
+        <img src="/static/images/brunch.webp" class="card-img-top"
+          alt="A close-up view of a table with breakfast, including eggs, bread and a cheese board." />
+        <div class="card-body">
+          <h5 class="card-title text-center">Breakfast</h5>
+          <p class="card-text">Enjoy your breakfast favourities with a French twist.</p>
+          <div class="text-center">
+            <a href="https://www.google.com/" class="btn btn-outline-light btn-sm stretched-link">Breakfast Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/static/images/lunch.webp" class="card-img-top"
+          alt="A waiter serving lunch appetizers." />
+        <div class="card-body">
+          <h5 class="card-title text-center">Lunch</h5>
+          <p class="card-text">Midday delights to energize you for the rest of your day.</p>
+          <div class="text-center">
+            <a href="https://www.google.com/" class="btn btn-outline-light btn-sm stretched-link">Lunch Menu</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/static/images/dinner.webp" class="card-img-top"
+          alt="A woman holding a wine glass at a dinner table in a restaurant." />
+        <div class="card-body">
+          <h5 class="card-title text-center">Dinner</h5>
+          <p class="card-text">Linger for the evening with our fine wines and rustic family favorites.</p>
+          <div class="text-center">
+            <a href="#" class="btn btn-outline-light btn-sm stretched-link">Dinner Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}

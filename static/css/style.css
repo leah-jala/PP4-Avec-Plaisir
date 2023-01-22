@@ -5,6 +5,7 @@
 body {
     background-color: #645132;
     font-family: 'Lato', sans-serif;
+    letter-spacing: .5px;
 }
 
 a {
@@ -66,7 +67,7 @@ a:hover {
 .cover-text-inner {
     text-align: center;
 }
-h1, h2, h3, p {
+h1, h2, h3, h4, p  {
     color: #efd485;
 }
 
@@ -114,7 +115,7 @@ footer {
     font-size: 20px;
 }
 
-/* 5. Index.html page */
+/* 5. menus.html page */
 
 .menus {
     padding-top: 20px;
@@ -135,3 +136,17 @@ p.card-text {
 #customForm {
     background-color: #efd485;
 }
+
+
+.wine-img {
+    max-width:80%; 
+   
+}
+
+.quotes {
+    font-size: 16px;
+}
+
+form {
+    max-width: 600px;
+} 
