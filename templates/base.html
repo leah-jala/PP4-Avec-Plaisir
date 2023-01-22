@@ -63,6 +63,10 @@
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'account_login' %}"><span
                             class="nav-colors">Sign In</span></a></li>
                 {% endif %}
+                {% if user.is_staff %}
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'admin:index' %}"><span
+                    class="nav-colors">Staff</span></a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
@@ -134,19 +138,6 @@
           $("#id_reservation_date").datepicker();
         });
       </script>
-    <!-- <script>
-        $(document).ready(function() {
-            var current = window.location.pathname;
-            $('.navbar-nav li a').each(function(){
-                var $this = $(this);
-                // if the current path is like this link, make it active
-                if($this.attr('href').indexOf(current) !== -1){
-                    $this.addClass('active');
-                }
-            })
-        });
-    </script> -->
-    
 
     <script>
         $(document).ready(function() {
