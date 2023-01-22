@@ -14,12 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path, include
 from home.views import get_homepage
+from menus.views import get_menus
+
+def redirect_view(request, *args, **kwargs):
+    return redirect('homepage')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_homepage, name="homepage"),
     path('accounts/', include('allauth.urls')),
     path('bookings/', include('bookings.urls')),
+    path('menus/', include('menus.urls')),
+    path('', redirect_view),
+    path('<path:invalid_path>', redirect_view),
 ]
+
