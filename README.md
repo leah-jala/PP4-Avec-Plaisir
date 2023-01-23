@@ -245,6 +245,8 @@ Set up Directories and deploy
 
 - In settings, 
     - Set DEBUG to False. If this is not done, cloudinary images won't be served and traceback error messages will be shown to the user (which can also reveal credentials that can benefit hackers).
+    - Add X_FRAME_OPTIONS = 'SAMEORIGIN'
+    
 ## Credits and Sources
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.

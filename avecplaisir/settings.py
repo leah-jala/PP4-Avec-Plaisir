@@ -112,6 +112,21 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 WSGI_APPLICATION = 'avecplaisir.wsgi.application'
 
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+development = os.environ.get('DEVELOPMENT', False)
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES =  {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
