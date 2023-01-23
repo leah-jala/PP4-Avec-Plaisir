@@ -44,7 +44,7 @@ a:hover {
 .hero-image {
     z-index: 2;
     padding-top: 60px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../images/hero.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://res.cloudinary.com/ds4ukszsx/image/upload/v1674482089/static/images/hero.1f6443dea531.webp");
     height: 450px;
     background-position: center;
     background-repeat: no-repeat;
