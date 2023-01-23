@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from phonenumber_field.modelfields import PhoneNumberField
 
 
 TABLE_SIZE = ((2, "2"), (4, "4"), (6, "6"), (8, "8"))
@@ -37,7 +36,7 @@ class Reservation(models.Model):
         User, on_delete=models.CASCADE, related_name="guest_reservation"
     )
     guest_name = models.CharField(max_length=20)
-    phone = PhoneNumberField(blank=True)
+    phone = models.CharField(max_length=20, blank=True)
     reservation_date = models.CharField(max_length=10)
     reservation_time = models.IntegerField(choices=BOOKING_TIMES, default=1)
     number_guests = models.IntegerField(choices=NUMBER_GUESTS, default=1)

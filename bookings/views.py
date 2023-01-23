@@ -10,6 +10,7 @@ from .forms import ReservationForm
 from datetime import datetime
 
 
+
 class CreateReservationView(SuccessMessageMixin, CreateView):
     """
     Renders a view to allows the user to create a reservation.
@@ -35,6 +36,7 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
             (10, "17:00"), (11, "17:30"),(12, "18:00"),
             (13, "18:30"), (14, "19:00"),(15, "19:30"),
         )
+
 
         # Convert the reservation date and time string fields to datetime
         time = form.instance.reservation_time

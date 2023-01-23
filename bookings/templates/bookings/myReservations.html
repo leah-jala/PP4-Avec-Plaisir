@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 {% if user.is_authenticated %}
-<div class="container">
-    <h1 class="display-4">{{ user.first_name }}'s Reservations</h1>
+    <div class="container">
+        <h1 class="display-4">{{ user.first_name|default:user.username }}'s Reservations</h1>
     <h3 class="lead">We look forward to serving you!</h3>
 </div>
+
     {% if reservations %}
         {% for reservation in reservations %}
         <div class="container">
