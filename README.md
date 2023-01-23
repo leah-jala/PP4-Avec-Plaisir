@@ -157,12 +157,26 @@ Wireframes were created to envisage how user can interact with the website in or
 #### Images
 ## Technologies
 - Balsamiq Wireframes
-
-## Technologies
-
 - Photo converter: https://cloudconvert.com/jpg-to-webp
+- Favicon generator: https://favicon.io/favicon-generator/
 
-## Testing
+## Testing and bugs
+
+## HTML validator 
+## CSS validator
+## Python validator
+## JS validator
+
+
+### Bugs
+- Phone field:  My phone number field was originally too restrictive and only would accept US number. 
+ tried different solutions, but ran out of time. For example, I tried to add a country code drop down, and 
+ I can see it is possible to default it to a specific country code, but that didn't work for me. I tried to 
+ handle the exception so that users could be given advice on how to enter a number correctly, as it did automatically
+ by Django, but this wasn't working either. I opted to make it a charfield and not required. As the user has to be 
+ signed in to make a reservation, it would still be possible for the restaurant to get in touch about the booking. 
+ It is not ideal and it is something I would fix later. 
+- myReservations.html - The header in the form used the users first_name, but you are not required to enter a first name when you sign up. I added a fiter to the html so that it would use the first name if it is there and otherwise use the username.
 
 ### Create an account
 
@@ -228,9 +242,14 @@ Set up Directories and deploy
 - In Heroku, link to GitHub as the deployment method
 
 
-## Credits
+## Credits and Sources
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
 - Datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
 - Photos from Pexels.com
     - Wine bottles: Stanislav Kondratiev
+- Built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
+
+
+## Sources for future
+- Django allauth social login - https://django-allauth.readthedocs.io/en/latest/providers.html#google
