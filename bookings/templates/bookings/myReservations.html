@@ -43,9 +43,10 @@
     <div class="container mt-4">
         <p>You haven't made any reservations yet. Please click the button below
             to make a reservation, or give us a call if you need assistance.</p> 
-        <button type="submit" class="btn btn-signup btn-lg">Book it!</button>
         <a class="btn btn-outline-light btn-lg" aria-current="page" href="{% url 'create_reservation' %}">
-            <span class="nav-colors">Cancel</span></a>
+            <span class="nav-colors">Book a Table</span></a>
+        <a class="btn btn-outline-light btn-lg" aria-current="page" href="{% url 'homepage' %}">
+            <span class="nav-colors">Home</span></a>
     </div>
     
     {% endif %}
