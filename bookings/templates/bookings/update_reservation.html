@@ -8,7 +8,9 @@
     <form method="POST">
         {{ form | crispy}}
         {% csrf_token %}
-        <input type="submit" value="Update">
+        <input class="btn button-style" type="submit" value="Update">
+        <a class="btn btn button-style" aria-current="page" href="{% url 'view_reservations' %}">
+            <span class="nav-colors">Cancel</span></a>
     </form>
 </div>
 

@@ -10,6 +10,8 @@
         <p>Are you sure you want to delete 
             your reservation on "{{ reservation.reservation_date }}"?</p>    
         <input type="submit" class="btn button-style" value="Confirm">
+        <a class="btn btn button-style" aria-current="page" href="{% url 'view_reservations' %}">
+            <span class="nav-colors">Cancel</span></a>
     </form>
 </div>
 
