@@ -12,7 +12,7 @@ class ReservationForm(forms.ModelForm):
             'reservation_time',
             'number_guests',
             'special_requests',)
-                
+
         labels = {
             'guest_name': 'Party Name',
             'phone': 'Telephone',
@@ -21,5 +21,3 @@ class ReservationForm(forms.ModelForm):
             'number_guests': 'Number Of Guests',
             'special_requests': "Special Requests",
         }
-                
-
