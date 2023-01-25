@@ -22,20 +22,24 @@
         enthusiasm. We've been serving classic French dishes since 2005, using only the freshest
         seasonal produce. The food may be old school, but our environment is lively and relaxed.
         We've been repeatedly reviewed as one of the best restaurants in London that won't break
-        your wallet.       
+        your wallet.
       </p>
-      <blockquote>
-        <q><h3 class="quotes" ><em>...no pretention or fanfare. The food speaks for itself!</em><br>Jay Rayner, The Observer</h3></q>
-        <q><h3 class="quotes" ><em>...a joyous trip to the French countryside in the heart of London!</em><br>Monica Galetti, The Observer</h3></q>
-      </blockquote>
-      <p><strong>Open daily from 10am - 10pm.</strong> Reservations advised. Please sign-up to the website to make
-        a reservation. We'll only ever contact you about your visit.
+      <blockquote class="px-4">
+        <h3 class="quotes"><em>"...no pretention or fanfare. The food speaks for itself!"</em><br>Jay Rayner, The
+          Observer</h3><br>
+        <h3 class="quotes"><em>"...a joyous trip to the French countryside in the heart of London!"</em><br>Monica
+          Galetti, The Observer</h3>
+      </blockquote><br>
+      <p><strong>Open daily from 10am - 10pm.</strong><br>
+        Reservations advised. Please <a href="{% url 'account_signup' %}">sign up</a> or
+        <a href="{% url 'account_login' %}">sign in</a> to the website to <a href="{% url 'create_reservation' %}">
+          make a reservation</a>. We'll only ever contact you about your visit.
       </p>
-      <a href="{% url 'create_reservation' %}" class="btn btn-outline-light btn-sm ">Book a Table</a>
-      <a href="{% url 'menus' %}" class="btn btn-outline-light btn-sm ">Menus</a>
     </div>
-    <div class="col-lg-6 col-md-12 col-sm-12  mt-4">
-      <img src="https://res.cloudinary.com/ds4ukszsx/image/upload/v1674482090/static/images/wine.127fc3a8db67.webp" alt="A photo of a wooden, criss-cross wine rack full of bottles." class="image-fluid rounded mx-auto d-block wine-img">
+    <div class="col-lg-6 col-md-12 col-sm-12 pb-4  mt-4">
+      <img src="https://res.cloudinary.com/ds4ukszsx/image/upload/v1674482090/static/images/wine.127fc3a8db67.webp"
+        alt="A photo of a wooden, criss-cross wine rack full of bottles."
+        class="image-fluid rounded mx-auto d-block wine-img">
     </div>
   </div>
 </div>
