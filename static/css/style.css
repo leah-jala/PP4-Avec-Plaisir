@@ -6,6 +6,8 @@ body {
     background-color: #645132;
     font-family: 'Lato', sans-serif;
     letter-spacing: .5px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -83,11 +85,6 @@ h2 {
     background-color: #6c5736;
 }
 
-/* .card .btn:hover {
-    background-color: #000 !important;
-    color: #fff !important;
-} */
-
 .card p {
     color: black;
 }
@@ -99,10 +96,7 @@ form {
 /*  4. Footer */
 footer {
     border-top: 1px solid #efd485;
-}
-
-.footer-logo {
-    color: #efd485;
+    font: #efd485;
 }
 
 .footer-font {
