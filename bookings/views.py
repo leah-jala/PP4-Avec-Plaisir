@@ -106,13 +106,14 @@ class ViewReservations(LoginRequiredMixin, ListView):
 
 
 class EditReservationView(
+    SuccessMessageMixin,
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    UpdateView):
+    
     """
     Allows the user to make changes to their booking.
     """
-        SuccessMessageMixin,
-        LoginRequiredMixin,
-        UserPassesTestMixin,
-        UpdateView):
     model = Reservation
     form_class = ReservationForm
     template_name = "bookings/update_reservation.html"
@@ -137,13 +138,13 @@ class EditReservationView(
 
 
 class DeleteReservationView(
+    SuccessMessageMixin,
+    UserPassesTestMixin,
+    LoginRequiredMixin,
+    DeleteView):
     """
     This class handles the deletion of reservations.
     """
-        SuccessMessageMixin,
-        UserPassesTestMixin,
-        LoginRequiredMixin,
-        DeleteView):
     model = Reservation
     template_name = 'bookings/delete_reservation.html'
     success_url = reverse_lazy('view_reservations')
