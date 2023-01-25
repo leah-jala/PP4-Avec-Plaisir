@@ -3,6 +3,9 @@ from .models import Reservation, Table
 
 
 class ReservationForm(forms.ModelForm):
+    """
+    Form to create and edit a reservation
+    """
     class Meta:
         model = Reservation
         fields = (

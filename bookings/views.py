@@ -20,6 +20,11 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('view_reservations')
 
     def form_valid(self, form):
+        """
+        Filters existing reservations by date, time and table,
+        strikes them off the available tables list and then
+        chooses the first available tables.
+        """
         form.instance.user = self.request.user
         form.instance.guest_name = form.cleaned_data['guest_name']
         form.instance.phone = form.cleaned_data['phone']
