@@ -12,7 +12,7 @@ body {
 
 a {
     text-decoration: none;
-    color:#efd485;
+    color: white;
 }
 
 a:hover {
@@ -24,7 +24,7 @@ a:hover {
     color: #efd485;
 }
 
-.nav-link {
+.nav-link a {
     color: #efd485;
 }
 
