@@ -101,6 +101,9 @@ class ViewReservations(LoginRequiredMixin, ListView):
 
 
 class EditReservationView(
+    """
+    Allows the user to make changes to their booking.
+    """
         SuccessMessageMixin,
         LoginRequiredMixin,
         UserPassesTestMixin,
@@ -112,16 +115,26 @@ class EditReservationView(
     success_url = reverse_lazy('view_reservations')
 
     def form_valid(self, form):
+        """
+        Handles form validation for the EditReservationView class.
+        """
         form.instance.user = self.request.user
         self.object = form.save()
         return super(EditReservationView, self).form_valid(form)
 
     def test_func(self):
+        """
+        Ensures the user making the request is the same
+        user that made the reservation.
+        """
         booking = self.get_object()
         return self.request.user == booking.user
 
 
 class DeleteReservationView(
+    """
+    This class handles the deletion of reservations.
+    """
         SuccessMessageMixin,
         UserPassesTestMixin,
         LoginRequiredMixin,
@@ -132,9 +145,17 @@ class DeleteReservationView(
     success_message = "Reservation was successfully deleted."
 
     def delete(self, request, *args, **kwargs):
+        """
+        Overrides Django's built-in delete method
+        to add a success message.
+        """
         messages.success(self.request, self.success_message)
         return super().delete(request, *args, **kwargs)
-        
+
     def test_func(self):
+        """
+        Ensures the user making the request is the same
+        user that made the reservation.
+        """
         booking = self.get_object()
         return self.request.user == booking.user
