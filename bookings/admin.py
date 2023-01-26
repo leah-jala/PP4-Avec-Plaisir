@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Reservation, Table
 
+
 @admin.register(Reservation)
 class Reservation(admin.ModelAdmin):
     """ Class to view Reservations on admin panel """
@@ -14,8 +15,7 @@ class Reservation(admin.ModelAdmin):
         'last_updated',
     )
 
-    search_fields = ['guest_name',]
-
+    search_fields = ['guest_name', ]
 
     list_filter = (
         'guest_name',
@@ -23,6 +23,7 @@ class Reservation(admin.ModelAdmin):
         'reservation_time',
         'last_updated',
     )
+
 
 @admin.register(Table)
 class TableAdmin(admin.ModelAdmin):

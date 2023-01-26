@@ -106,11 +106,11 @@ class ViewReservations(LoginRequiredMixin, ListView):
 
 
 class EditReservationView(
-    SuccessMessageMixin,
-    LoginRequiredMixin,
-    UserPassesTestMixin,
-    UpdateView):
-    
+        SuccessMessageMixin,
+        LoginRequiredMixin,
+        UserPassesTestMixin,
+        UpdateView):
+
     """
     Allows the user to make changes to their booking.
     """
@@ -138,10 +138,10 @@ class EditReservationView(
 
 
 class DeleteReservationView(
-    SuccessMessageMixin,
-    UserPassesTestMixin,
-    LoginRequiredMixin,
-    DeleteView):
+        SuccessMessageMixin,
+        UserPassesTestMixin,
+        LoginRequiredMixin,
+        DeleteView):
     """
     This class handles the deletion of reservations.
     """
