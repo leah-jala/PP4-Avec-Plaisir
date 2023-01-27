@@ -120,26 +120,15 @@ Wireframes were created to envisage how user can interact with the website in or
 - to allow the staff user and designated staff to manage users and permissions.
 
  
- ##### Homepage - PC/Larger Screens
- ![homepage](docs/wireframes/Homepage-pc.JPG)
+ ##### Homepage
+ ![homepage](docs/wireframes/homepage.JPG)
 
- ##### Homepage - Homepage Smaller Devices
-![homepage small](docs/wireframes/hompage-small.JPG)
-
- ##### Homepage - Logged in User
- ![homepage logged in user](docs/wireframes/hompage-logged-in.JPG)
-
- ##### Menu pages 
- ![menu pages](docs/wireframes/menus.JPG)
-
- ##### My Account
- ![my account page](docs/wireframes/my-account.JPG)
-
- ##### Create Account
- ![create or edit account page](docs/wireframes/my-account.JPG)
+ ##### Menu landing page, and service menus 
+ ![menus](docs/wireframes/menu-page.JPG)
+ ![individual menus](docs/wireframes/menus.JPG)
 
  ##### Booking Form
- ![booking form](docs/wireframes/booking.JPG)
+ ![booking form](docs/wireframes/bookings.JPG)
  
  
  ##### Booking Success
