@@ -87,7 +87,9 @@ h2 {
     font-size: 16px;
 }
 
-
+.wine-img {
+    max-width:80%; 
+}
 
 /* bookings.html */
 

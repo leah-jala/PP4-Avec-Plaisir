@@ -130,12 +130,10 @@ Wireframes were created to envisage how user can interact with the website in or
  ##### Booking Form
  ![booking form](docs/wireframes/bookings.JPG)
  
- 
  ##### My Reservations
  ![my reservations](docs/wireframes/my-reservations.JPG)
 
 #### Database Design
-
 
 
 ### Surface Plane
@@ -146,12 +144,13 @@ Wireframes were created to envisage how user can interact with the website in or
 #### Fonts
 #### Images
 ## Technologies
+- Google Fonts
+- Font Awesome
 - Balsamiq Wireframes
 - Photo converter: https://cloudconvert.com/jpg-to-webp
 - Favicon generator: https://favicon.io/favicon-generator/
 - CI Python Linter
 - autopep8
-
 
 ## Testing and bugs
 
@@ -172,7 +171,21 @@ No errors found
 
 ## Python validator
 CI Python Linter
-![pep8 valid](docs/validators/pep8%20valid.JPG)
+### avecplaisir-settings.py
+### avecplaisir-urls.py
+![pep8 avecplaisir/urls](docs/validators/avecplaisir-urls.JPG)
+### Bookings/views.py
+![pep8 bookings/views](docs/validators/pep8%20valid.JPG)
+### Bookings/admin.py
+![pep8 bookings/admin](docs/validators/pep8-admin.JPG)
+### Bookings/models.py
+![pep8 bookings/models](docs/validators/pep8-models.JPG)
+### Bookings/urls.py
+![pep8 bookings/urls](docs/validators/pep8-urls.JPG)
+### Menus-views.py
+![pep8 menus/views](docs/validators/pep8-menus-views.JPG)
+### Menus-urls.py
+![pep8 menus/urls](docs/validators/pep8-menus-urls.JPG)
 
 ## JS validator
 
@@ -188,7 +201,6 @@ CI Python Linter
  It is not ideal and it is something I would fix later. 
 - myReservations.html - The header in the form used the users first_name, but you are not required to enter a first name when you sign up. I added a fiter to the html so that it would use the first name if it is there and otherwise use the username.
 
-### Create an account
 
 ### CreateReservationView Tests
 - The user can access the view and see the reservation form
@@ -201,8 +213,6 @@ CI Python Linter
     True - After the form submits, the user is directed to "My Reservations" where they can see the new entry.
 - A success message is displayed after a reservation is made
     True - The message is show at the top of the "My Reservations"" page.
-
-
 
 ## Deployment
 
@@ -255,7 +265,7 @@ Set up Directories and deploy
 
 - In settings, 
     - Set DEBUG to False. If this is not done, cloudinary images won't be served and traceback error messages will be shown to the user (which can also reveal credentials that can benefit hackers).
-    - Add X_FRAME_OPTIONS = 'SAMEORIGIN'
+- Update Heroku configuration settings. Remove CollectStatic.
     
 ## Credits and Sources
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
@@ -266,6 +276,14 @@ Set up Directories and deploy
     - Wine bottles: Stanislav Kondratiev
 - Built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
 
+
+## Future updates
+These are the things I would improve with an update:
+- Refactor the bookings/views.py document so that it follows the DRY principle.
+- Create the form so immediate feedback is given as the user enters data into form field so they know the information they've entered is correct.
+- Change the guest number and time fields on the reservation form so that they are not pre-filled and so they are validated to prevent the user from forgetting this field.
+- Make the special requests field appear only if they have filled it in. 
+- Create a more complex menus app so that staff users could enter new meals via a form, and indicate if it should be active (included on the menu), which service it should be part of, and what type of menu item it is (starter, main, dessert, etc).
 
 ## Sources for future
 - Django allauth social login - https://django-allauth.readthedocs.io/en/latest/providers.html#google
