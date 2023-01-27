@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Lato&display=swap');
 
-/* 1. Base.html page and common to all pages */
+/* Base.html page and common to all pages */
 
 body {
     background-color: #645132;
@@ -18,7 +18,15 @@ a {
 a:hover {
     color:#efd485;
 }
-/* 2. navbar */
+
+.btn {
+    margin-top: 20px;
+    color: #efd485;
+    border-color: #efd485;
+    background-color: #6c5736;
+}
+
+/* navbar */
 .navbar {
     z-index: 10;
     color: #efd485;
@@ -35,12 +43,11 @@ a:hover {
     padding-left: 20px;
 }
 
-/* 3. hero image and text overlay */
+/* index.html hero image and text overlay */
 #logo-text {
     font-family: 'Allura', cursive;
     font-size: 80px;
 }
-
 
 .hero-image {
     z-index: 2;
@@ -68,7 +75,7 @@ a:hover {
 .cover-text-inner {
     text-align: center;
 }
-h1, h2, h3, h4, p, q  {
+h1, h2, h3, h4, p {
     color: #efd485;
 }
 
@@ -76,22 +83,19 @@ h2 {
     font-size: 30px;
 }
 
-.btn {
-    margin-top: 20px;
-    color: #efd485;
-    border-color: #efd485;
-    background-color: #6c5736;
+.quotes {
+    font-size: 16px;
 }
 
-.card p {
-    color: black;
-}
+
+
+/* bookings.html */
 
 form {
     color: #efd485;
 }
 
-/*  4. Footer */
+/* Footer */
 footer {
     border-top: 1px solid #efd485;
     color: #efd485;
@@ -107,14 +111,11 @@ a .footer-font {
     color:#efd485;
 }
 
-/* 5. menus.html page */
+/* 5. Menu pages */
 
-.menus {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
+.menu-page {
+    max-width: 600px;
 }
-
 
 .card {
     background: #efd485;
@@ -125,24 +126,13 @@ p.card-text {
     color: black;
 }
 
-#customForm {
-    background-color: #efd485;
-}
-
-
-.wine-img {
-    max-width:80%; 
-   
-}
-
-.quotes {
-    font-size: 16px;
-}
-
 form {
     max-width: 600px;
 } 
 
-.menu-page {
-    max-width: 600px;
+.menus {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
 }
+

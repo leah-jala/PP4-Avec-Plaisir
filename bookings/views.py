@@ -17,6 +17,7 @@ booking_times = (
             (13, "18:30"), (14, "19:00"), (15, "19:30"),
         )
 
+
 class CreateReservationView(SuccessMessageMixin, CreateView):
     """
     Renders a view to allows the user to create a reservation.
@@ -39,8 +40,6 @@ class CreateReservationView(SuccessMessageMixin, CreateView):
         form.instance.reservation_time = form.cleaned_data['reservation_time']
         form.instance.number_guests = form.cleaned_data['number_guests']
         form.instance.special_requests = form.cleaned_data['special_requests']
-
-        
 
         # Convert the reservation date and time string fields to datetime
         time = form.instance.reservation_time

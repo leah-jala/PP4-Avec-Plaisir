@@ -131,7 +131,8 @@ Wireframes were created to envisage how user can interact with the website in or
  ![booking form](docs/wireframes/bookings.JPG)
  
  
- ##### Booking Success
+ ##### My Reservations
+ ![my reservations](docs/wireframes/my-reservations.JPG)
 
 #### Database Design
 
@@ -148,13 +149,33 @@ Wireframes were created to envisage how user can interact with the website in or
 - Balsamiq Wireframes
 - Photo converter: https://cloudconvert.com/jpg-to-webp
 - Favicon generator: https://favicon.io/favicon-generator/
+- CI Python Linter
+- autopep8
+
 
 ## Testing and bugs
 
 ## HTML validator 
+### Homepage
+### Menus
+### Book a Table
+### My Reservations
+### Sign in 
+### Sign Out
+### 403
+### 404
+### 500
+
 ## CSS validator
+No errors found
+![css valid](docs/validators/css-valid.JPG)
+
 ## Python validator
+CI Python Linter
+![pep8 valid](docs/validators/pep8%20valid.JPG)
+
 ## JS validator
+
 
 
 ### Bugs
@@ -241,6 +262,7 @@ Set up Directories and deploy
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
 - Datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
 - Photos from Pexels.com
+    - Brunch photo by Emrah Tolu: https://www.pexels.com/photo/fried-egg-beside-bread-platter-2662875/
     - Wine bottles: Stanislav Kondratiev
 - Built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
 

@@ -24,3 +24,4 @@ class ReservationForm(forms.ModelForm):
             'number_guests': 'Number Of Guests',
             'special_requests': "Special Requests",
         }
+        
