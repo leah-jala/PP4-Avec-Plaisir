@@ -39,29 +39,21 @@
         <div class="collapse navbar-collapse justify-content-left" id="navbarNavDropdown">
             <ul class="navbar-nav justify-content-right">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">
-                        <span class="nav-colors">Home</span></a>
+                    <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">Home</a>
                 </li>
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'menus' %}">
-                        <span class="nav-colors">Menus</span></a>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'menus' %}">Menus</a>
                 </li>
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'create_reservation' %}">
-                        <span class="nav-colors">Book a Table</span></a>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'create_reservation' %}">Book a Table</a>
                 </li>
                 {% if user.is_authenticated %}
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'view_reservations' %}"><span
-                            class="nav-colors">My Reservations</span></a></li>
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_logout' %}"><span
-                            class="nav-colors">Sign out</span></a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'view_reservations' %}">My Reservations</a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_logout' %}">Sign out</a></li>
                 {% else %}
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_signup' %}"><span
-                            class="nav-colors">Sign Up</span></a></li>
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_login' %}"><span
-                            class="nav-colors">Sign In</span></a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
                 {% endif %}
                 {% if user.is_staff %}
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'admin:index' %}"><span
-                            class="nav-colors">Staff</span></a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'admin:index' %}">Staff</a></li>
                 {% endif %}
             </ul>
         </div>
