@@ -1,124 +1,132 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<!-- Menu block content -->
 <div class="container menu-page">
-    <div class="row d-flex justify-content-center">
-      <div class="col-10 pb-5 text-center">
-        <h1 class="quicksand-font header text-uppercase">Dinner</h1>
-        <p class="text-center">Served from 18:00 - 23:00 daily.<br>
-          Remember to check out our <a href="{% url 'breakfast' %}">breakfast</a> and <a href="{% url 'lunch' %}">lunch</a> menus.</p>
-        <hr>
-      </div>
+  <!-- menu title - dinner -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h1 class="quicksand-font header text-uppercase">Dinner</h1>
+      <p class="text-center">Served from 18:00 - 23:00 daily.<br>
+        Remember to check out our <a href="{% url 'breakfast' %}">breakfast</a> and <a
+          href="{% url 'lunch' %}">lunch</a> menus.</p>
+      <hr>
     </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-10 pb-5 text-center">
-        <h2 class="text-center quicksand-font text-uppercase">Les Entrees</h2><br>
-        <h4>Veloute de Céleri-Rave à la Truffe</h4>
-        <p>Truffled Celeriac Soup.<br>
-          £12.50 </p>
-        <h4>Soufflé au Fromage de Chèvre</h4>
-        <p>Double Baked Goat’s Cheese Souffle, Parmesan Sauce<br>
-          £16.00</p>
-        <h4>Demi-douzaine d’Escargots à l’Os à la Bourguignonne</h4>
-        <p>Six large Burgundian ‘Petit Gris’ Snails, served in a Roast Marrow Bone, 
-            Parsley and Garlic Butter<br>
-          £18.50</p>
-      </div>
+  </div>
+  <!-- Menu category -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h2 class="text-center quicksand-font text-uppercase">Les Entrees</h2><br>
+      <h4>Veloute de Céleri-Rave à la Truffe</h4>
+      <p>Truffled Celeriac Soup.<br>
+        £12.50 </p>
+      <h4>Soufflé au Fromage de Chèvre</h4>
+      <p>Double Baked Goat’s Cheese Souffle, Parmesan Sauce<br>
+        £16.00</p>
+      <h4>Demi-douzaine d’Escargots à l’Os à la Bourguignonne</h4>
+      <p>Six large Burgundian ‘Petit Gris’ Snails, served in a Roast Marrow Bone,
+        Parsley and Garlic Butter<br>
+        £18.50</p>
     </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-10 pb-5 text-center">
-        <h2 class="text-center quicksand-font text-uppercase">Les Plats</h4><br>
+  </div>
+  <!-- Next menu category -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h2 class="text-center quicksand-font text-uppercase">Les Plats</h2><br>
         <h4>Agnolotti aux Cèpes</h4>
         <p>Handmade Agnolotti Ravioli with Porcini Mushrooms <br>
-            £17.95</p>
+          £17.95</p>
         <h4>Sole de Douvres Meunière</h4>
         <p>Large Dover Sole Meunière, Spring Vegetables <br>
-            £27.95</p>
+          £27.95</p>
         <h4>Canard Colvert à l’Orange au Porto et Choux Rouge</h4>
         <p>Mallard Duck served off the bone, Red Cabbage, Orange and Port Sauce <br>
-            £29.50 </p>
+          £29.50 </p>
         <h4>Tournedos Rossini, Sauce Périgord</h4>
         <p>Simmenthal Beef Fillet, Seared Foie Gras, Spinach, Sauce Périgord <br>
-            £39.50 </p>
+          £39.50 </p>
         <h4>Tournedos Rossini, Sauce Périgord</h4>
-            <p>Simmenthal Beef Fillet, Seared Foie Gras, Spinach, Sauce Périgord <br>
-                £39.50 </p>
-      </div>
+        <p>Simmenthal Beef Fillet, Seared Foie Gras, Spinach, Sauce Périgord <br>
+          £39.50 </p>
     </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-10 pb-5 text-center">
-        <h2 class="text-center quicksand-font text-uppercase">Les Végétariens</h2><br>
-        <h4>Cheese Soufflé</h4>
-          <p>This twice-baked souffle is served with mushrooms, cream and a side salad.<br>
+  </div>
+  <!-- Next menu category -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h2 class="text-center quicksand-font text-uppercase">Les Végétariens</h2><br>
+      <h4>Cheese Soufflé</h4>
+      <p>This twice-baked souffle is served with mushrooms, cream and a side salad.<br>
         £17.50</p><br>
-        <h4>Provençal Artichoke Ragout</h4>
-        <p>A hearty stew with peppers chickpeas, garlic and olives served over couscouse. <br>
-          £15.95 </p>
-        <h4>Vegetarian Bourgignon</h4>
-        <p>This vegetarian twist on the French classic is celebrates carrots,
-            green been and mushrooms. <br>
-            £17.95</p>
-        <h4>Ratatouille</h4>
-        <p>Courgettes, auberine and peppers in a tomato sauce served over rice 
-            with grated cheese and a poached egg.<br>
-            £17.95 </p>
-      </div>
+      <h4>Provençal Artichoke Ragout</h4>
+      <p>A hearty stew with peppers chickpeas, garlic and olives served over couscouse. <br>
+        £15.95 </p>
+      <h4>Vegetarian Bourgignon</h4>
+      <p>This vegetarian twist on the French classic is celebrates carrots,
+        green been and mushrooms. <br>
+        £17.95</p>
+      <h4>Ratatouille</h4>
+      <p>Courgettes, auberine and peppers in a tomato sauce served over rice
+        with grated cheese and a poached egg.<br>
+        £17.95 </p>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="col-10 pb-5 text-center">
-          <h2 class="text-center quicksand-font text-uppercase">Choucroute</h4>
-            <p>Served with your choice of bread</p><br>
-          <h4>Alsacienne</h4>
-          <p>Served with cured, smoked belly of pork and franfurter <br>
-            £12.95</p>
-          <h4>Alsacienne "Plaisir"</h4>
-          <p>The Alsacienne with ham hock and garlic sausage <br>
-            £12.95</p>
-          <h4>Royale</h4>
-          <p>The Alsacienne with Morteau sausage and pork chop <br>
-            £7.95 </p>
-        </div>
-      </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-10 pb-5 text-center">
-        <h2 class="text-center quicksand-font text-uppercase">Les Desserts</h4><br>
+  </div>
+  <!-- Next menu category -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h2 class="text-center quicksand-font text-uppercase">Choucroute</h2>
+        <p>Served with your choice of bread</p><br>
+        <h4>Alsacienne</h4>
+        <p>Served with cured, smoked belly of pork and franfurter <br>
+          £12.95</p>
+        <h4>Alsacienne "Plaisir"</h4>
+        <p>The Alsacienne with ham hock and garlic sausage <br>
+          £12.95</p>
+        <h4>Royale</h4>
+        <p>The Alsacienne with Morteau sausage and pork chop <br>
+          £7.95 </p>
+    </div>
+  </div>
+  <!-- Next menu category -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h2 class="text-center quicksand-font text-uppercase">Les Desserts</h2><br>
         <h4>Gateau</h4>
         <p>Your choice of cakes made daily.<br>
           £6.95 </p>
         <h4>Cheese Board</h4>
         <p>Choose 3 cheeses from our wide selection, served with bread selection. <br>
           £10.95 </p>
-      </div>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="col-10 pb-5 text-center">
-          <h2 class="text-center quicksand-font text-uppercase">Wine, Cocktails, Aperitifs and Digestifs</h4><br>
-          <p>We have an extensive list of wines, beers, cocktails and spirits. Please see our drinks menu
-            when you visit. Check out our social media channels for news and tasting notes from our 
-            sommelier.
-          </p>
-        </div>
+  </div>
+  <!-- Next menu category -->
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 pb-5 text-center">
+      <h2 class="text-center quicksand-font text-uppercase">Wine, Cocktails, Aperitifs and Digestifs</h2><br>
+        <p>We have an extensive list of wines, beers, cocktails and spirits. Please see our drinks menu
+          when you visit. Check out our social media channels for news and tasting notes from our
+          sommelier.
+        </p>
+    </div>
+    <!-- Next menu category -->
     <div class="row d-flex justify-content-center">
       <div class="col-10 pb-5 text-center">
-        <h2 class="text-center quicksand-font text-uppercase">Coffee, Juice & More</h4><br>
-        <h4>Hot Drinks, £3.50</h4>
-        <p>Expresso</p>
-        <p>Cafe au Lait</p>
-        <p>Cappucino</p>
-        <p>Mocha</p>
-        <p>Pot of Tea (see choices on table)</p><br>
-        <h4>Fresh pressed juices, £4.95</h4>
-        <p>Orange Juice</p>
-        <p>Raspberry, Apple and Elderflower</p>
-        <p>Carrot and Ginger</p>
-        <p>Fresh Lemonade</p><br>
-        <h4>Sparkling Water and Soft Drinks £2.95</h4>
-        <p>We have a full range of soft drinks and a selection of sparkling waters.
+        <h2 class="text-center quicksand-font text-uppercase">Coffee, Juice & More</h2><br>
+          <h4>Hot Drinks, £3.50</h4>
+          <p>Expresso</p>
+          <p>Cafe au Lait</p>
+          <p>Cappucino</p>
+          <p>Mocha</p>
+          <p>Pot of Tea (see choices on table)</p><br>
+          <h4>Fresh pressed juices, £4.95</h4>
+          <p>Orange Juice</p>
+          <p>Raspberry, Apple and Elderflower</p>
+          <p>Carrot and Ginger</p>
+          <p>Fresh Lemonade</p><br>
+          <h4>Sparkling Water and Soft Drinks £2.95</h4>
+          <p>We have a full range of soft drinks and a selection of sparkling waters.
             Please refer to the drinks menu.
-        </p>
+          </p>
       </div>
     </div>
-    
-
+  </div>
   {% endblock %}
