@@ -279,7 +279,7 @@ Set up Directories and deploy
     - Brunch photo by Emrah Tolu: https://www.pexels.com/photo/fried-egg-beside-bread-platter-2662875/
     - Wine bottles: Stanislav Kondratiev
 - Built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
-
+<!-- https://stackoverflow.com/questions/35427641/how-to-dynamically-set-the-active-class-in-bootstrap-navbar -->
 
 ## Future updates
 These are the things I would improve with an update:
