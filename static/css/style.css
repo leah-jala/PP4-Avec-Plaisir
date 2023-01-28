@@ -40,8 +40,8 @@ h2 {
     color: #efd485;
 }
 
-.nav-link a {
-    color: #efd485;
+.nav-link {
+    color:#efd485;
 }
 
 #logo {
@@ -144,7 +144,3 @@ form {
 .card p {
     color: black;
 }
-
-/* #customForm {
-    background-color: #efd485;
-} */
