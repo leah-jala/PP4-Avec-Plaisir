@@ -22,10 +22,12 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
     <!-- Fengyuan Chen's Datepicker -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"
-        integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css"
+        integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"
-        integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+        integrity="sha512-RCgrAvvoLpP7KVgTkTctrUdv7C6t7Un3p1iaoPr1++3pybCyCsCZZN7QEHMZTcJTmcJ7jzexTO+eFpHk4OCFAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -46,7 +48,8 @@
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'create_reservation' %}">Book a Table</a>
                 </li>
                 {% if user.is_authenticated %}
-                <li class="dropdown-item"><a class="nav-link" href="{% url 'view_reservations' %}">My Reservations</a></li>
+                <li class="dropdown-item"><a class="nav-link" href="{% url 'view_reservations' %}">My Reservations</a>
+                </li>
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'account_logout' %}">Sign out</a></li>
                 {% else %}
                 <li class="dropdown-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
