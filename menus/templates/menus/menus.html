@@ -2,16 +2,18 @@
 
 {% block content %}
 
-
+<!-- Page Heading -->
 <section class="menus pb-4">
   <h1>Our Menus</h1>
 </section>
+<!-- Web cards block -->
 <div class="container pb-4">
   <div class="row row-cols-1 row-cols-md-3 g-3">
+    <!-- Breakfast menu card -->
     <div class="col">
       <div class="card">
         <img src="https://res.cloudinary.com/ds4ukszsx/image/upload/v1674482088/static/images/brunch.b24424350291.webp" class="card-img-top"
-          alt="A close-up view of a table with breakfast, including eggs, bread and a cheese board." />
+          alt="A close-up view of a table with breakfast, including eggs, bread and a cheese board.">
         <div class="card-body">
           <h5 class="card-title text-center">Breakfast</h5>
           <p class="card-text">Enjoy your breakfast favourites with a French twist.</p>
@@ -21,24 +23,25 @@
         </div>
       </div>
     </div>
+    <!-- Lunch menu card -->
     <div class="col">
       <div class="card">
         <img src="https://res.cloudinary.com/ds4ukszsx/image/upload/v1674482088/static/images/lunch.7af9ff3320ec.webp" class="card-img-top"
-          alt="A waiter serving lunch appetizers." />
+          alt="A waiter serving lunch appetizers.">
         <div class="card-body">
           <h5 class="card-title text-center">Lunch</h5>
           <p class="card-text">Choose from our plat du jour, soups, salads or specialty "choucroute."</p>
           <div class="text-center">
             <a href="{% url 'lunch' %}" class="btn btn-outline-light btn-sm stretched-link">Lunch Menu</a>
           </div>
-
         </div>
       </div>
     </div>
+    <!-- Dinner menu card -->
     <div class="col">
       <div class="card">
         <img src="https://res.cloudinary.com/ds4ukszsx/image/upload/v1674482089/static/images/dinner.219fa9d437e9.webp" class="card-img-top"
-          alt="A woman holding a wine glass at a dinner table in a restaurant." />
+          alt="A woman holding a wine glass at a dinner table in a restaurant.">
         <div class="card-body">
           <h5 class="card-title text-center">Dinner</h5>
           <p class="card-text">Linger over our fine wines, gourmet dishs and rustic family favorites.</p>
@@ -49,5 +52,5 @@
       </div>
     </div>
   </div>
-
+</div>
 {% endblock %}

@@ -75,9 +75,12 @@ What are the most important features? What trade offs are needed
 Looking at the goals and use cases above, the following requirements were identified.
 
 - Minimum requirements:
+    - The customer must be able to sign in and sign out of the website.
+    - Staff members should see a link to the admin panel when signed, which can not be seen by non-staff users.
     - There must be a way to take and manage customer bookings with full CRUD.
     - The customer must be able to view the menus.
     - The customer must have information about the location of the restaurant.
+    - Links to the address (map location), telephone number, email and social media links should be in the footer
 
 - If time permits, or for future development
     - A separate contact page.
@@ -189,7 +192,8 @@ CI Python Linter
 
 ## JS validator
 
-
+### The Datepicker and active class
+![JS hint](docs/validators/JS-Hint-Avec-Plaisir.JPG)
 
 ### Bugs
 - Phone field:  My phone number field was originally too restrictive and only would accept US number. 
