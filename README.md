@@ -1,6 +1,8 @@
 # AVEC PLAISIR
 
-"Avec Plaisir" (With Pleasure) is a fictional French Restaurant located on Charlotte Street in London, which is a wonderful location for food lovers to enjoy food from independent restaurants.
+This project is a Code Institute course project requirement. You can see the deployed site [here](https://pp4-avec-plaisir.herokuapp.com/menus/menus/). 
+
+"Avec Plaisir" (With Pleasure) is a fictional French Restaurant located on Charlotte Street in London, which is a wonderful location in London for food lovers.
 
 The webpage was created as a restaurant management application to allow the site owner, with staff, to present their restaurant to the world and to allow customers to make and manage their reservations. Staff may also make and manage reservations via their own user profiles (like all users) or via the admin panel, with the correct permissions.
 
@@ -304,24 +306,25 @@ FEATURES
 
 ![no access](docs/website/no-access.JPG)
 
-- If a user types in another user's reservation number into a URL, they will be refused access
+- If a user types in another user's reservation number into a URL, they will be refused access and led to a styled 403 page. This was accomplieshed with the UserPassesTestMixin
 
+![403 snippet](docs/website/403-snippet.JPG)
 
-- The project makes use of the UserPassesText
+The 500 error pages appears when there is an internal server error, which tells users there is a problem with the website.
+
 
 ### Skeleton Plane
 
 #### Wireframes
 
-Wireframes were created to envisage how user can interact with the website in order to 
+Wireframes were created to envisage how user can interact with the website, with a view to:
 
 - simple interaction (not too many clicks, and only include necessary features)
 - allow the customer to get an overall feel for the restaurant as quickly as possible.
 - allow customer to review opening hours. 
 - allow customer to see restaurant location, contact information and social media links.
 - allow the customer to make a booking quickly.
-- to allow staff to easily review bookings.
-- to allow the staff user and designated staff to manage users and permissions.
+- to allow customer to update or delete their booking.
 
  
  ##### Homepage
@@ -371,30 +374,79 @@ When a customer makes a booking, the logic of the code does the following:
 #### Design
 
 #### Colour Palette
+
+I began by choosing a photo that matched the idea I had for the restaurant and using the color picker on Google Chrome to select colors from the image.
+
+The background color is # #645132 and the fonts are #efd485. With these colors, I was trying to give the impression of coffee and creme brulee, which a lot of people associate as warm nice things, and also with French food and drink.
+
+I had to add an overlay to the hero image in order to give enough contrast with the font color. 
+
+
 #### Fonts
+
+I have used Google fonts. The restaurant name and logo uses Allura, and the rest of the site uses Lato and defaults to sans-serif.
+
 #### Images
+
+My images are free images available on Pexels.com.  Credits below.
+
 ## Technologies
-- Google Fonts
-- Font Awesome
-- Balsamiq Wireframes
-- Photo converter: https://cloudconvert.com/jpg-to-webp
-- Favicon generator: https://favicon.io/favicon-generator/
+- HTML - Site structure
+- Bootstrap - Used for most of the styling.
+- CSS - to override some Bootstrap classes and add additional styling.
+- Javascript - for the datepicker and the active class on the navbar.
+- Google Fonts - The Allura and Lato fonts
+- Font Awesome - for all icons
+- Balsamiq Wireframes - for initial site design
+- [Cloud Convert](https://cloudconvert.com/jpg-to-webp) - to convert files to from jpegs to webp.
+- [Favicon.io](https://favicon.io/favicon-generator/) - to create the site's favicon
+- [autopep8](https://pypi.org/project/autopep8/) - to force pep9 conformity to code from command line.
+- [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) - to control the rendering behaviour of django forms.
 - CI Python Linter
-- autopep8
-- crispy forms
+- WC3 [HTML Validator](https://validator.w3.org/) and [CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [JSHint](https://jshint.com/)
+- [GitHub](https://github.com/leah-jala/PP4-Avec-Plaisir) - to host source code
+- Git - to commit and push code
+- GitPod - The IDE used to develop the site
+- [Heroku](https://dashboard.heroku.com/apps) - PaaS used for deployment
+- [Cloudinary](https://cloudinary.com/) - To host images.
+- [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL databases
 
 ## Testing and bugs
 
+## Website testing
+All tests have been documented in a spreadsheet. The link will be made to the project assessors. Screenshots are below.
+![Testing 1](docs/validators/testing1.JPG)
+![Testing 2](docs/validators/testing2.JPG)
+![Testing 3](docs/validators/testing3.JPG)
+![Testing 4](docs/validators/testing4.JPG)
+![Testing 5](docs/validators/testing5.JPG)
+
 ## HTML validator 
 ### Homepage
+![Home html checker](docs/validators/checker-homepage.JPG)
 ### Menus
+![Menus page html checker](docs/validators/checker-menus.JPG)
+
 ### Book a Table
+Menus landing page
+![Book a Table checker](docs/validators/menus-checker.JPG)
+Breakfast menu
+![Breakfast checker](docs/validators/checker-breakfast.JPG)
+
+The lunch and dinner pages were checked, but not added here as they are nearly identical. 
+
 ### My Reservations
-### Sign in 
-### Sign Out
-### 403
-### 404
-### 500
+![Reservations html checker](docs/validators/checker-reservations.JPG)
+### Sign in / up / out
+Sign in
+![Sign in checker](docs/validators/checker-signin.JPG)
+Sign up
+![Sign up checker](docs/validators/checker-signup.JPG)
+
+### Sign out and error pages
+
+These were also tested but is not included here as snippets. These forms are mostly a test of my base.html.
 
 ## CSS validator
 No errors found
@@ -403,6 +455,8 @@ No errors found
 ## Python validator
 CI Python Linter
 ### avecplaisir-settings.py
+
+![pep8 settings](docs/validators/settings-pep8.JPG)
 ### avecplaisir-urls.py
 ![pep8 avecplaisir/urls](docs/validators/avecplaisir-urls.JPG)
 ### Bookings/views.py
@@ -420,34 +474,76 @@ CI Python Linter
 
 ## JS validator
 
-### The Datepicker and active class
+The Datepicker and active class included together
 ![JS hint](docs/validators/JS-Hint-Avec-Plaisir.JPG)
 
-### Bugs
-- Phone field:  My phone number field was originally too restrictive and only would accept US number. 
- tried different solutions, but ran out of time. For example, I tried to add a country code drop down, and 
+## Lighthouse
+
+It was a mistake not to put the datepicker javascript script into a separate file or on the pages required only, as it affected page performance stats.
+
+### Homepage
+Desktop
+![Homepage](docs/validators/Lighthouse-homepage.JPG)
+Small Screen
+![Menus](docs/validators/light-homepage-sm.JPG)
+
+### Menus
+Desktop
+![Menus](docs/validators/lighthouse-menus-page-lg.JPG)
+Small Screen
+![Menus](docs/validators/lighthouse-menus-sm.JPG)
+Breakfast - Desktop
+![Breakfast](docs/validators/lighthouse-breakfast-lg.JPG)
+Breakfast - Small Screen
+![Breakfast](docs/validators/lighthouse-breakfast-sm.JPG)
+Lunch - Small Screen
+![Lunch](docs/validators/lighthouse-lunch-sm.JPG)
+Dinner - Large Screen
+![Dinner](docs/validators/lighthouse-dinner-lg.JPG)
+
+### Book a Table
+Desktop
+![Book a table](docs/validators/lighthouse-book-pc.JPG)
+Small Screen
+![Book a table](docs/validators/lighthouse-book-sm.JPG)
+
+### My Rerservations
+Desktop
+![My Reservations](docs/validators/My-reserv-lg.JPG)
+Small Screen
+![My Reservations](docs/validators/My-reserv-sm.JPG)
+
+### Sign up/in/out
+They are almost identical so one set provided
+Sign-up Large Screen
+![Sign up](docs/validators/lighthouse-signup-lg.JPG)
+Sign-up Small Screen
+![Sign up](docs/validators/lighthouse-signup-sm.JPG)
+
+
+### Bugs/Fixes and Problems to resolve in future updates
+- When running the html checker I discovered that some of my cdns were risky or to be deprecated, so I needed to update them. This related to the Datepicker and JQuery.
+- DRY principle in logic: I realized late that I did not include my reservation logic in my edit(update) view, but only the CreateReservationView. I think because I was hurried, nothing seemed to work. I tried to move the logic to the form.py file, but this didn't work. I tried to create a definition that both views could call upon and this didn't work. I need to do more research on this, but my mentor sugggested I should put the logic into a separate python file and import it into the views. 
+- It was a mistake to put the javascript short scripts into the base.html file, as not all pages needed the datepicker. In future, I would include it only in the files where they are needed. I should have made a base form for the reservation pages (booking form page and my reservations list)
+- Phone field:  My phone number field was originally too restrictive and only would accept US number. I tried different solutions, but ran out of time. For example, I tried to add a country code drop down, and 
  I can see it is possible to default it to a specific country code, but that didn't work for me. I tried to 
- handle the exception so that users could be given advice on how to enter a number correctly, as it did automatically
- by Django, but this wasn't working either. I opted to make it a charfield and not required. As the user has to be 
- signed in to make a reservation, it would still be possible for the restaurant to get in touch about the booking. 
- It is not ideal and it is something I would fix later. 
+ handle the exception so that users could be given advice on how to enter a number correctly, as it did automatically by Django, but this wasn't working either. I opted to make it a charfield and not required. As the user has to be signed in to make a reservation, it would still be possible for the restaurant to get in touch about the booking. It is not ideal and it is something I would fix later. 
 - myReservations.html - The header in the form used the users first_name, but you are not required to enter a first name when you sign up. I added a fiter to the html so that it would use the first name if it is there and otherwise use the username.
+- Footer inconsistency - The footer isn't completely consistent on larger screens. On the sign in and out pages it sits under the content in the middle of the page and the body background continues under it. 
 
+## Future updates
+These are the things I would improve with an update:
+- It was a mistake to put the datepicker Javascript in the base.html file. In and upgrade, I would confine it to the files for which it is needed via an import.
+- Refactor the bookings/views.py document so that it follows the DRY principle.
+- Create the form so immediate feedback is given as the user enters data into form field so they know the information they've entered is correct.
+- Change the guest number and time fields on the reservation form so that they are not pre-filled and so they are validated to prevent the user from forgetting this field.
+- Make the special requests field appear only if they have filled it in. 
+- Create a more complex menus app so that staff users could enter new meals via a form, and indicate if it should be active (included on the menu), which service it should be part of, and what type of menu item it is (starter, main, dessert, etc).
 
-### CreateReservationView Tests
-- The user can access the view and see the reservation form
-    True - manually tested
-- The form is valid and can create a new reservation
-    True - reservations are posted to the datbase.
-- The form is invalid and doesn't create a new reservation
-    True - The form will not submit until all required fields have valid entries. 
-- The view redirects to the correct URL after a reservation is made
-    True - After the form submits, the user is directed to "My Reservations" where they can see the new entry.
-- A success message is displayed after a reservation is made
-    True - The message is show at the top of the "My Reservations"" page.
+## Unittesting
+I was doing something wrong, perhaps at the command line. The tests wouldn't run at all. It was holding me back, and because it wasn't required to pass this project, I put it aside so I could keep going. It was a pity because I could see the benefit. If you make a resesrvation, you'll see that the reservation numbers are now over 100, which means I have created and updated that many in order to test my website, which is a waste of time. The tests that should have been unit tests are in the excel file.
 
 ## Deployment
-
 ### Early Deployment
 
 This project was deployed as part of the project set up, as advised in the "I think therefore I blog" walkthrough. This is to ensure that our main dependenices are installed and working from the outset. From there one can build the project on a solid foundation and reduce stress at the end of the project. 
@@ -500,23 +596,19 @@ Set up Directories and deploy
 - Update Heroku configuration settings. Remove CollectStatic.
     
 ## Credits and Sources
-- Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project/agile planning.
+- My course mentor, Daisy McGirr, was as always a fabulous guide through the project as well as a source of encouragement.
+- Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project for the agile planning. I did not refer to his project for the rest of my project development. In the beginning, I simply felt out of my depth and couldn't even understand his project, but additionally, I wanted to do it on my own. When I go to improve mine, I plan to have a closer look at his work. I did refer to his readme file to put together this file.
 - Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
 - Datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html, updated at https://cdnjs.com/libraries/datepicker
 - Photos from Pexels.com
-    - Brunch photo by Emrah Tolu: https://www.pexels.com/photo/fried-egg-beside-bread-platter-2662875/
+    - Hero Photo by Pixabay: https://www.pexels.com/photo/alcohol-architecture-bar-beer-260922/
+    - Breakfast photo by Emrah Tolu: https://www.pexels.com/photo/fried-egg-beside-bread-platter-2662875/
+    - Lunch Photo by Pixabay: https://www.pexels.com/photo/blur-breakfast-chef-cooking-262978/
+    - Dinner photo by Elina Sazonova: https://www.pexels.com/photo/woman-holding-wine-glass-selective-focus-photography-1850595/
     - Wine bottles: Stanislav Kondratiev
 - Built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
 <!-- https://stackoverflow.com/questions/35427641/how-to-dynamically-set-the-active-class-in-bootstrap-navbar -->
 
-## Future updates
-These are the things I would improve with an update:
-- It was a mistake to put the datepicker Javascript in the base.html file. In and upgrade, I would confine it to the files for which it is needed via an import.
-- Refactor the bookings/views.py document so that it follows the DRY principle.
-- Create the form so immediate feedback is given as the user enters data into form field so they know the information they've entered is correct.
-- Change the guest number and time fields on the reservation form so that they are not pre-filled and so they are validated to prevent the user from forgetting this field.
-- Make the special requests field appear only if they have filled it in. 
-- Create a more complex menus app so that staff users could enter new meals via a form, and indicate if it should be active (included on the menu), which service it should be part of, and what type of menu item it is (starter, main, dessert, etc).
 
 ## Sources for future
 - Django allauth social login - https://django-allauth.readthedocs.io/en/latest/providers.html#google
