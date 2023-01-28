@@ -455,7 +455,8 @@ No errors found
 ## Python validator
 CI Python Linter
 ### avecplaisir-settings.py
-
+Note: After getting advice from my mentor on how to fix the default Django settings by adding a ' and moving the text to a new line, the settings.py file passed the pep8 test, and it seemed to deploy, but later when I updated my readme file, it didn't deploy. I changed the settings back, and then it deployed successfully. I've left it with some lines too long. 
+ 
 ![pep8 settings](docs/validators/settings-pep8.JPG)
 ### avecplaisir-urls.py
 ![pep8 avecplaisir/urls](docs/validators/avecplaisir-urls.JPG)
