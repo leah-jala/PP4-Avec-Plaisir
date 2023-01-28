@@ -597,19 +597,23 @@ Set up Directories and deploy
 - Update Heroku configuration settings. Remove CollectStatic.
     
 ## Credits and Sources
-- My course mentor, Daisy McGirr, was as always a fabulous guide through the project as well as a source of encouragement.
+- My course mentor, Daisy McGirr, was as always a fabulous guide through the project as well as a source of encouragement. 
 - Project planning and planes - Reviewed relevant CI lectures and and reviewed a tutorial led by Daisy McGirr on Agile Planning. I also referred to Gareth McGirr's github project for the agile planning. I did not refer to his project for the rest of my project development. In the beginning, I simply felt out of my depth and couldn't even understand his project, but additionally, I wanted to do it on my own. When I go to improve mine, I plan to have a closer look at his work. I did refer to his readme file to put together this file.
-- Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
-- Datepicker - https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html, updated at https://cdnjs.com/libraries/datepicker
+- Code instiute tutorials for early deployment and project setup. Deployment steps - These were taken directly from the "I think therefore I blog" walkthrough.
+- Looked back at the Code Institute Love Running project to remember how to create an overlay on my hero image.
+- [W3Schools](https://www.w3schools.com/) to generally help my memory.
+- [Python Crash Course](https://www.amazon.co.uk/Python-Crash-Course-2nd-Edition/dp/1593279280) Book, by Eric Matthes for general help remembering how to do things Python.
+- Bootstrap documentation - for general help. I adapted Bootstrap ready made code for navbar and footer.
+- Django documentation
+- Advice on built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
+- Advice on the navbar active class on Stack Overflow: https://stackoverflow.com/questions/35427641/how-to-dynamically-set-the-active-class-in-bootstrap-navbar
+- Datepicker code was found here- https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html, I needed to update the CDN and found the new links at https://cdnjs.com/libraries/datepicker
 - Photos from Pexels.com
     - Hero Photo by Pixabay: https://www.pexels.com/photo/alcohol-architecture-bar-beer-260922/
     - Breakfast photo by Emrah Tolu: https://www.pexels.com/photo/fried-egg-beside-bread-platter-2662875/
     - Lunch Photo by Pixabay: https://www.pexels.com/photo/blur-breakfast-chef-cooking-262978/
     - Dinner photo by Elina Sazonova: https://www.pexels.com/photo/woman-holding-wine-glass-selective-focus-photography-1850595/
     - Wine bottles: Stanislav Kondratiev
-- Built-in template flags and filters https://docs.djangoproject.com/en/4.1/ref/templates/builtins/
-<!-- https://stackoverflow.com/questions/35427641/how-to-dynamically-set-the-active-class-in-bootstrap-navbar -->
-
 
 ## Sources for future
 - Django allauth social login - https://django-allauth.readthedocs.io/en/latest/providers.html#google
